@@ -21,6 +21,8 @@ export const theme = {
     12: "48px",
     14: "56px",
     24: "96px",
+    60: "240px",
+    90: "340px"
   },
   colors: {
     White: "#ffffff",
@@ -173,7 +175,14 @@ export const theme = {
     karla: "Karla",
     "noto-sans-mono": "Noto Sans Mono",
   },
-  extend: {},
+  extend: {
+    aspectRatio: {
+      '1/2': '1 / 2',
+      '2/3': '2 / 3',
+      '4/3': '4 / 3',
+      '16/9': '16 / 9'
+    }
+  },
 };
 export const plugins = [
   plugin(function ({ addBase, theme }) {

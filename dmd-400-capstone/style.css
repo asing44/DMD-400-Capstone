@@ -4,6 +4,7 @@
 
 @layer base {
     html {
+        min-height: 100dvh;
         font-optical-sizing: auto;
     }
 
