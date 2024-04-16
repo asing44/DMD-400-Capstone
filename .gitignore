@@ -1,5 +1,6 @@
 # Dependencies
 /node_modules
+/.parcel-cache
 
 # Visual Studio Code
 /.vscode
@@ -7,3 +8,6 @@
 
 # Extras
 /extras
+
+# Dist
+/dist

@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html {
+        font-optical-sizing: auto;
+    }
+
+    h1 {
+        line-height: 90px;
+        letter-spacing: -1.44px;
+    }
+
+    p {
+        line-height: 24px;
+    }
+}

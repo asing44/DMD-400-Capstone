@@ -1,3 +1,7 @@
+// ======================
+// Section: Initialization
+// ======================
+
 gsap.registerPlugin(ScrollTrigger);
 
 const lenis = new Lenis();
@@ -13,3 +17,28 @@ gsap.ticker.add((time) => {
 });
 
 gsap.ticker.lagSmoothing(0);
+
+/**
+ * Animation for the navigaiton button
+ *
+ */
+
+const b = new rive.Rive({
+  src: "/nav-button.riv",
+  canvas: document.getElementById("navButton"),
+  autoplay: true,
+  stateMachines: "SM__nav-button",
+  onLoad: () => {
+    b.resizeDrawingSurfaceToCanvas();
+  },
+});
+
+
+// Resize window for animations
+window.addEventListener(
+  "resize",
+  () => {
+    b.resizeDrawingSurfaceToCanvas();
+  },
+  false
+);
