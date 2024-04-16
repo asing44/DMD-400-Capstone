@@ -4,15 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vite build & npx tailwindcss -o output.css --minify",
-    "start": "vite preview & npx tailwindcss -i style.css -o output.css --watch"
+    "start": "vite & npx tailwindcss -i style.css -o output.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3",
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "@rive-app/canvas": "^2.14.1",
+    "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5"
   }
 }

@@ -1,7 +1,7 @@
 import plugin from "tailwindcss/plugin";
 
 /** @type {import('tailwindcss').Config} */
-export const content = ["./src/**/*.{html,js}"];
+export const content = ["./**/*.{html,js}"];
 export const theme = {
   screens: {
     sm: "640px",
