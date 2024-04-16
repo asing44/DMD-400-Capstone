@@ -1,3 +1,12 @@
+import './output.css'
+import javascriptLogo from './javascript.svg'
+import viteLogo from '/vite.svg'
+import { setupCounter } from './counter.js'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 // ======================
 // Section: Initialization
 // ======================
@@ -24,7 +33,7 @@ gsap.ticker.lagSmoothing(0);
  */
 
 const b = new rive.Rive({
-  src: "/nav-button.riv",
+  src: "nav-button.riv",
   canvas: document.getElementById("navButton"),
   autoplay: true,
   stateMachines: "SM__nav-button",
@@ -42,3 +51,5 @@ window.addEventListener(
   },
   false
 );
+
+setupCounter(document.querySelector('#counter'))

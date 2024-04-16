@@ -1,0 +1,18 @@
+{
+  "name": "-dmd-400-capstone",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build & npx tailwindcss -o output.css --minify",
+    "start": "vite preview & npx tailwindcss -i style.css -o output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}
