@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336.01 175.33">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 6px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke: #f9fafb;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5 {
+        stroke-linejoin: round;
+      }
+
+      .cls-2, .cls-6, .cls-7 {
+        stroke-width: 0px;
+      }
+
+      .cls-6, .cls-8 {
+        fill: #f9fafb;
+      }
+
+      .cls-9 {
+        fill: #eaecf0;
+        font-family: NotoSansMono-ExtraLight, 'Noto Sans Mono';
+        font-variation-settings: 'wght' 200, 'wdth' 100;
+        font-weight: 200;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 0 0 0 0 12 12 0 8;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke-linecap: round;
+        stroke-width: 4px;
+      }
+
+      .cls-8 {
+        font-family: NotoSansMono-SemiBold, 'Noto Sans Mono';
+        font-variation-settings: 'wght' 600, 'wdth' 100;
+        font-weight: 600;
+      }
+
+      .cls-5 {
+        stroke: #fff;
+      }
+
+      .cls-10 {
+        font-size: 40px;
+      }
+
+      .cls-7 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="logo__v4">
+    <g id="mono--inverse">
+      <g id="logo__mono-text">
+        <g id="type">
+          <text class="cls-10" transform="translate(192.01 114.77)"><tspan class="cls-8"><tspan x="0" y="0">Smart</tspan></tspan><tspan class="cls-9"><tspan x="0" y="45">Garden</tspan></tspan></text>
+        </g>
+        <g>
+          <line class="cls-1" x1="43.72" y1="43.88" x2="32" y2="32.17"/>
+          <g>
+            <circle class="cls-2" cx="24" cy="24.17" r="8"/>
+            <path class="cls-6" d="M24,10.17c-7.72,0-14,6.28-14,14s6.28,14,14,14,14-6.28,14-14-6.28-14-14-14ZM24,32.17c-4.41,0-8-3.59-8-8s3.59-8,8-8,8,3.59,8,8-3.59,8-8,8Z"/>
+          </g>
+          <circle class="cls-3" cx="24" cy="24" r="22"/>
+        </g>
+        <g>
+          <path class="cls-4" d="M33.46,158.71c.9.9,2.14,1.46,3.51,1.46h99.03c13.25,0,24-10.75,24-24V37.13c0-1.37-.55-2.61-1.45-3.51"/>
+          <path class="cls-6" d="M124,55.17h-16c-9.92,0-18,8.08-18,18v14h-14c-9.92,0-18,8.08-18,18v22c0,5.51,4.49,10,10,10h16c9.92,0,18-8.08,18-18v-14h14c9.92,0,18-8.08,18-18v-22c0-5.51-4.49-10-10-10ZM130,87.17c0,7.72-6.28,14-14,14h-16c-3.31,0-6-2.69-6-6v-22c0-7.72,6.28-14,14-14h16c3.31,0,6,2.69,6,6v22ZM98,119.17c0,7.72-6.28,14-14,14h-16c-3.31,0-6-2.69-6-6v-22c0-7.72,6.28-14,14-14h10v4c0,7.04,5.22,12.88,12,13.86v10.14Z"/>
+          <path class="cls-5" d="M155.04,32.17h-83.04c-22.09,0-40,17.91-40,40v83.03c0,1.37.56,2.61,1.46,3.51l26.14-26.14c-1.01-1.56-1.6-3.41-1.6-5.4v-22c0-9.92,8.08-18,18-18h14v-14c0-9.92,8.08-18,18-18h16c3.52,0,6.62,1.84,8.4,4.6l26.15-26.15h0c-.9-.9-2.14-1.45-3.51-1.45Z"/>
+          <path class="cls-7" d="M72,38.17c-18.75,0-34,15.25-34,34v73.51l14.48-14.48-.2-1.04c-.19-.98-.28-1.99-.28-2.99v-22c0-13.23,10.77-24,24-24h8v-8c0-13.23,10.77-24,24-24h16c2.47,0,4.82.54,7,1.6l1.28.63,13.23-13.23h-73.51Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

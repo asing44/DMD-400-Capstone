@@ -12,5 +12,9 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "gsap": "^3.12.5"
   }
 }
