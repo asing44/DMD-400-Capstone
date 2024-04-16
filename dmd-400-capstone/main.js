@@ -35,7 +35,7 @@ gsap.ticker.lagSmoothing(0);
  */
 
 const b = new rive.Rive({
-  src: "nav-button.riv",
+  src: "./rive/nav-button.riv",
   canvas: document.getElementById("navButton"),
   autoplay: true,
   stateMachines: "SM__nav-button",
