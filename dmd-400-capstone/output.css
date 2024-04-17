@@ -827,6 +827,10 @@ p {
   margin-top: 8px;
 }
 
+.mt-4 {
+  margin-top: 16px;
+}
+
 .mt-8 {
   margin-top: 32px;
 }
@@ -930,12 +934,32 @@ p {
   display: none;
 }
 
-.aspect-square {
-  aspect-ratio: 1 / 1;
+.aspect-2\/3 {
+  aspect-ratio: 2 / 3;
 }
 
 .aspect-auto {
   aspect-ratio: auto;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-3\/2 {
+  aspect-ratio: 3 / 2;
+}
+
+.aspect-4\/3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect-16\/9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-1\/2 {
+  aspect-ratio: 1 / 2;
 }
 
 .h-1 {
@@ -946,28 +970,48 @@ p {
   height: 56px;
 }
 
-.h-\[500px\] {
-  height: 500px;
-}
-
 .h-full {
   height: 100%;
+}
+
+.h-45 {
+  height: 180px;
 }
 
 .max-h-12 {
   max-height: 48px;
 }
 
-.min-h-24 {
-  min-height: 96px;
+.max-h-45 {
+  max-height: 180px;
+}
+
+.max-h-14 {
+  max-height: 56px;
+}
+
+.max-h-24 {
+  max-height: 96px;
+}
+
+.min-h-45 {
+  min-height: 180px;
+}
+
+.min-h-48 {
+  min-height: 192px;
 }
 
 .min-h-90 {
   min-height: 340px;
 }
 
-.min-h-48 {
-  min-height: 192px;
+.min-h-8 {
+  min-height: 32px;
+}
+
+.min-h-14 {
+  min-height: 56px;
 }
 
 .w-12 {
@@ -990,8 +1034,25 @@ p {
   width: weird-and-invalid;
 }
 
+.w-60 {
+  width: 240px;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.min-w-8 {
+  min-width: 32px;
+}
+
 .flex-auto {
   flex: 1 1 auto;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .flex-shrink {
@@ -1529,34 +1590,25 @@ p {
   gap: 16px;
 }
 
-.gap-x-8 {
-  -moz-column-gap: 32px;
-       column-gap: 32px;
+.gap-x-4 {
+  -moz-column-gap: 16px;
+       column-gap: 16px;
 }
 
 .gap-y-12 {
   row-gap: 48px;
 }
 
-.gap-y-8 {
-  row-gap: 32px;
-}
-
-.gap-x-4 {
-  -moz-column-gap: 16px;
-       column-gap: 16px;
-}
-
-.gap-y-4 {
-  row-gap: 16px;
-}
-
-.gap-y-6 {
-  row-gap: 24px;
+.gap-y-2 {
+  row-gap: 8px;
 }
 
 .gap-y-5 {
   row-gap: 20px;
+}
+
+.gap-y-8 {
+  row-gap: 32px;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2208,11 +2260,6 @@ p {
 .px-6 {
   padding-left: 24px;
   padding-right: 24px;
-}
-
-.px-7 {
-  padding-left: 28px;
-  padding-right: 28px;
 }
 
 .px-8 {
