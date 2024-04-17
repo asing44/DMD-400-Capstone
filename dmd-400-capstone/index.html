@@ -38,6 +38,7 @@
             <header class="header fb__header">
                 <h2 class="h2 fb__heading font-medium text-Gray-500">Features and benefits</h2>
             </header>
+            <!-- cards -->
             <div class="container cards fb__cards flex flex-row-reverse px-2 gap-x-4">
                 <div class="container cards__right flex flex-col gap-y-5">
                     <div class="container cards__card flex aspect-2/3 flex-col justify-start items-middle pt-1 px-2 pb-4 border border-Gray-300 rounded-xl bg-Gray-200">
@@ -77,16 +78,20 @@
             <header class="header hw__header">
                 <h2 class="h2 fb__heading font-medium text-Gray-500">How it works</h2>
             </header>
-            <div class="wrapper hw__wrapper flex justify-end">
-                <div class="container hw__main main w-fit border flex flex-col gap-y-2">
-                    <div class="border container main__top flex">
-                        <div class="border main__process min-h-8 min-w-8"></div>
-                        <div class="border main__process min-h-8 min-w-8"></div>
-                        <div class="border main__process min-h-8 min-w-8"></div>
-                        <div class="border main__process min-h-8 min-w-8"></div>
-                        <div class="border main__process min-h-8 min-w-8"></div>
+            <!-- main -->
+            <div class="wrapper hw__wrapper flex justify-end px-2">
+                <div class="container hw__main main flex flex-col items-end gap-y-2">
+                    <!-- Top row -->
+                    <div class="container main__top flex items-center gap-x-1 pr-4 pl-12">
+                        <div class="main__process animation__hw--active"># Process</div>
+                        <!-- ? Should I create animation level classes? -->
+                        <div class="border main__process animation__hw--queued"></div>
+                        <!--  -->
+                        <div class="border main__process animation__hw--inactive"></div>
+                        <div class="border main__process animation__hw--inactive"></div>
+                        <div class="border main__process animation__hw--inactive"></div>
                     </div>
-                    <div class="wrapper main__graphic h-45 w-60 border rounded-xl border-Gray-300 bg-Gray-200"></div>
+                    <div class="wrapper main__graphic w-full aspect-3/2 border rounded-xl border-Gray-300 bg-Gray-200"></div>
                     <div class="border container main__controls flex flex-row-reverse">
                         <div class="wrapper main__control--right"></div>
                         <div class="wrapper main__control--left"></div>

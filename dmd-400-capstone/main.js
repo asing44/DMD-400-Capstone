@@ -77,3 +77,5 @@ ScrollTrigger.create({
     lastScrollTop = currentScrollTop;
   },
 });
+
+// ! Create animation specific classes!

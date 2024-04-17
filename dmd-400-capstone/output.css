@@ -471,24 +471,6 @@ p {
   font-family: Noto Sans Mono;
 }
 
-html {
-  min-height: 100dvh;
-  font-optical-sizing: auto;
-}
-
-h1 {
-  line-height: 90px;
-  letter-spacing: -1.44px;
-}
-
-h2 {
-  line-height: 60px
-}
-
-p {
-  line-height: 24px;
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -938,64 +920,32 @@ p {
   aspect-ratio: 2 / 3;
 }
 
-.aspect-auto {
-  aspect-ratio: auto;
+.aspect-3\/2 {
+  aspect-ratio: 3 / 2;
 }
 
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
 
-.aspect-3\/2 {
-  aspect-ratio: 3 / 2;
-}
-
-.aspect-4\/3 {
-  aspect-ratio: 4 / 3;
-}
-
-.aspect-16\/9 {
-  aspect-ratio: 16 / 9;
-}
-
-.aspect-1\/2 {
-  aspect-ratio: 1 / 2;
-}
-
 .h-1 {
   height: 4px;
-}
-
-.h-14 {
-  height: 56px;
 }
 
 .h-full {
   height: 100%;
 }
 
-.h-45 {
-  height: 180px;
-}
-
 .max-h-12 {
   max-height: 48px;
-}
-
-.max-h-45 {
-  max-height: 180px;
-}
-
-.max-h-14 {
-  max-height: 56px;
 }
 
 .max-h-24 {
   max-height: 96px;
 }
 
-.min-h-45 {
-  min-height: 180px;
+.min-h-14 {
+  min-height: 56px;
 }
 
 .min-h-48 {
@@ -1004,14 +954,6 @@ p {
 
 .min-h-90 {
   min-height: 340px;
-}
-
-.min-h-8 {
-  min-height: 32px;
-}
-
-.min-h-14 {
-  min-height: 56px;
 }
 
 .w-12 {
@@ -1034,25 +976,12 @@ p {
   width: weird-and-invalid;
 }
 
-.w-60 {
-  width: 240px;
-}
-
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.min-w-8 {
-  min-width: 32px;
+.w-full {
+  width: 100%;
 }
 
 .flex-auto {
   flex: 1 1 auto;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
 }
 
 .flex-shrink {
@@ -1588,6 +1517,11 @@ p {
 
 .gap-4 {
   gap: 16px;
+}
+
+.gap-x-1 {
+  -moz-column-gap: 4px;
+       column-gap: 4px;
 }
 
 .gap-x-4 {
@@ -2280,8 +2214,16 @@ p {
   padding-bottom: 16px;
 }
 
+.pl-12 {
+  padding-left: 48px;
+}
+
 .pr-1 {
   padding-right: 4px;
+}
+
+.pr-4 {
+  padding-right: 16px;
 }
 
 .pt-1 {
@@ -2835,6 +2777,69 @@ p {
 
 .\[vite\:html\] {
   vite: html;
+}
+
+/* ======================
+   Section: Initialization
+/* ======================
+
+@layer base {
+    html {
+        min-height: 100dvh;
+        font-optical-sizing: auto;
+    }
+
+    h1 {
+        line-height: 90px;
+        letter-spacing: -1.44px;
+    }
+
+    h2 {
+        line-height: 60px
+    }
+
+    p {
+        line-height: 24px;
+    }
+}
+
+/* ======================
+   Section: Animation
+/* ======================
+
+/* How it works animations classes */
+
+.animation__hw--active {
+  flex-grow: 1;
+  margin-right: 4px;
+  padding: 4px 12px 4px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 12px;
+  background-color: #eaecf0;
+  font-size: 1.125rem;
+  color: #667085;
+  text-wrap: nowrap;
+}
+
+/* h-2/3 aspect-square mr-1 rounded-md border-Gray-300 bg-Gray-200 */
+
+.animation__hw--queued {
+  height: 65%;
+  aspect-ratio: 1 / 1;
+  margin-right: 4px;
+  border: 1px solid #d0d5dd;
+  border-radius: 0.5rem;
+  background-color: #eaecf0;
+}
+
+/* h-4 aspect-square rounded-full border-Gray-200 bg-Gray-100 */
+
+.animation__hw--inactive {
+  height: 50%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid #eaecf0;
+  border-radius: 0.5rem;
+  background-color: #f2f4f7;
 }
 
 @media (min-width: 640px) {
