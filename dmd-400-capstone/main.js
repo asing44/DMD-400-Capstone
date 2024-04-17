@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 const lenis = new Lenis();
 
 lenis.on("scroll", (e) => {
-  console.log(e);
+  // console.log(e);
 });
 
 lenis.on("scroll", ScrollTrigger.update);
@@ -44,7 +44,6 @@ const b = new rive.Rive({
   },
 });
 
-
 // Resize window for animations
 window.addEventListener(
   "resize",
@@ -54,4 +53,27 @@ window.addEventListener(
   false
 );
 
-setupCounter(document.querySelector('#counter'))
+// ======================
+// Section: Navigation
+// ======================
+
+let lastScrollTop = 0;
+
+// Setup ScrollTrigger
+ScrollTrigger.create({
+  trigger: "#body",
+  start: "top top", // Trigger at the top of the viewport
+  end: "bottom bottom", // Trigger at the bottom of the viewport
+  onUpdate: (self) => {
+    const scrollDirection = self.direction; // 1 for down, -1 for up
+    let currentScrollTop = self.scroll(); // Current scroll position
+
+    if (scrollDirection === 1) {
+      console.log("Scrolling Down");
+    } else if (scrollDirection === -1) {
+      console.log("Scrolling Up");
+    }
+    // Update last scroll position
+    lastScrollTop = currentScrollTop;
+  },
+});

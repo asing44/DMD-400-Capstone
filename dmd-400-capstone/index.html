@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
     </head>
-    <body class="mx-4 mt-14 bg-Gray-50">
+    <body id="body" class="mx-4 mt-14 bg-Gray-50">
         <nav class="nav flex justify-between items-center px-2 py-4 rounded-xl border-2 border-Gray-300 bg-Gray-200">
           <button class="btn nav__btn flex items-center max-h-12 basis-auto px-6 py-4 border border-Brand-300 rounded-tr rounded-br-lg rounded-tl-lg rounded-bl bg-Brand-300 sm:bg-Brand-200 sm:hover:bg-Brand-300 text-Gray-25 font-semibold">signup</button>
           <div class="flex justify-center items-center gap-4 p-2 rounded-xl border border-Gray-300 bg-Gray-100">
@@ -32,6 +32,45 @@
             </div>
             <div class="hero__animation flex justify-center align-middle p-6 border rounded-xl border-Gray-300 bg-Gray-200">
                 <div class="placeholder min-h-90 flex-auto border border-Gray-300 rounded-lg bg-Gray-100"></div>
+            </div>
+        </section>
+        <section class="section fb flex flex-col gap-y-8 mt-12">
+            <header class="header fb__header">
+                <h2 class="h2 fb__heading font-medium text-Gray-500">Features and benefits</h2>
+            </header>
+            <div class="container cards fb__cards flex flex-row-reverse px-7 gap-x-4">
+                <div class="container cards__right flex flex-col gap-y-5">
+                    <div class="container cards__card flex flex-col justify-start align-middle pt-1 px-2 pb-4 border border-Gray-300 rounded-xl bg-Gray-200">
+                        <p class="cards__tag pr-1 pb-2 text-sm font-normal text-Gray-500 text-right">feature</p>
+                        <div class="container cards__graphic min-h-48 aspect-auto border border-Gray-300 rounded-xl bg-Gray-100 z-20"></div>
+                        <div class="container cards__name flex flex-col h-14 justify-end items-center pb-2 px-8 border border-Gray-400 rounded-t-none rounded-b-xl bg-Gray-300 -translate-y-4 z-10">
+                            <h3 class="cards__copy font-noto-sans-mono text-lg text-Gray-500 ">Name</h3>
+                        </div>
+                    </div>
+                    <div class="container cards__card flex flex-col justify-start align-middle pt-1 px-2 pb-4 border border-Gray-300 rounded-xl bg-Gray-200">
+                        <p class="cards__tag pr-1 pb-2 text-sm font-normal text-Gray-500 text-right">feature</p>
+                        <div class="container cards__graphic min-h-48 aspect-auto border border-Gray-300 rounded-xl bg-Gray-100 z-20"></div>
+                        <div class="container cards__name flex flex-col h-14 justify-end items-center pb-2 px-8 border border-Gray-400 rounded-t-none rounded-b-xl bg-Gray-300 -translate-y-4 z-10">
+                            <h3 class="cards__copy font-noto-sans-mono text-lg text-Gray-500 ">Name</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="container cards__left flex flex-col gap-y-5 mt-8">
+                    <div class="container cards__card flex flex-col justify-start align-middle pt-1 px-2 pb-4 border border-Gray-300 rounded-xl bg-Gray-200">
+                        <p class="cards__tag pr-1 pb-2 text-sm font-normal text-Gray-500 text-right">feature</p>
+                        <div class="container cards__graphic min-h-48 aspect-auto border border-Gray-300 rounded-xl bg-Gray-100 z-20"></div>
+                        <div class="container cards__name flex flex-col h-14 justify-end items-center pb-2 px-8 border border-Gray-400 rounded-t-none rounded-b-xl bg-Gray-300 -translate-y-4 z-10">
+                            <h3 class="cards__copy font-noto-sans-mono text-lg text-Gray-500 ">Name</h3>
+                        </div>
+                    </div>
+                    <div class="container cards__card flex flex-col justify-start align-middle pt-1 px-2 pb-4 border border-Gray-300 rounded-xl bg-Gray-200">
+                        <p class="cards__tag pr-1 pb-2 text-sm font-normal text-Gray-500 text-right">feature</p>
+                        <div class="container cards__graphic min-h-48 aspect-auto border border-Gray-300 rounded-xl bg-Gray-100 z-20"></div>
+                        <div class="container cards__name flex flex-col h-14 justify-end items-center pb-2 px-8 border border-Gray-400 rounded-t-none rounded-b-xl bg-Gray-300 -translate-y-4 z-10">
+                            <h3 class="cards__copy font-noto-sans-mono text-lg text-Gray-500 ">Name</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </body>

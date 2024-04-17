@@ -452,6 +452,7 @@ h1 {
 
 h2 {
   font-family: Karla;
+  font-size: 3rem;
 }
 
 h3 {
@@ -471,13 +472,17 @@ p {
 }
 
 html {
-  min-height: 100vh;
+  min-height: 100dvh;
   font-optical-sizing: auto;
 }
 
 h1 {
   line-height: 90px;
   letter-spacing: -1.44px;
+}
+
+h2 {
+  line-height: 60px
 }
 
 p {
@@ -741,6 +746,14 @@ p {
   isolation: auto;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
 .float-start {
   float: inline-start;
 }
@@ -802,12 +815,20 @@ p {
   margin-top: -24px;
 }
 
+.mt-12 {
+  margin-top: 48px;
+}
+
 .mt-14 {
   margin-top: 56px;
 }
 
 .mt-2 {
   margin-top: 8px;
+}
+
+.mt-8 {
+  margin-top: 32px;
 }
 
 .box-border {
@@ -913,12 +934,20 @@ p {
   aspect-ratio: 1 / 1;
 }
 
+.aspect-auto {
+  aspect-ratio: auto;
+}
+
 .h-1 {
   height: 4px;
 }
 
-.h-60 {
-  height: 240px;
+.h-14 {
+  height: 56px;
+}
+
+.h-\[500px\] {
+  height: 500px;
 }
 
 .h-full {
@@ -929,16 +958,16 @@ p {
   max-height: 48px;
 }
 
-.min-h-60 {
-  min-height: 240px;
-}
-
 .min-h-24 {
   min-height: 96px;
 }
 
 .min-h-90 {
   min-height: 340px;
+}
+
+.min-h-48 {
+  min-height: 192px;
 }
 
 .w-12 {
@@ -1011,6 +1040,11 @@ p {
 
 .border-separate {
   border-collapse: separate;
+}
+
+.-translate-y-4 {
+  --tw-translate-y: -16px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .\!transform {
@@ -1495,17 +1529,34 @@ p {
   gap: 16px;
 }
 
-.gap-x-6 {
-  -moz-column-gap: 24px;
-       column-gap: 24px;
+.gap-x-8 {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+
+.gap-y-12 {
+  row-gap: 48px;
+}
+
+.gap-y-8 {
+  row-gap: 32px;
+}
+
+.gap-x-4 {
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.gap-y-4 {
+  row-gap: 16px;
 }
 
 .gap-y-6 {
   row-gap: 24px;
 }
 
-.gap-y-12 {
-  row-gap: 48px;
+.gap-y-5 {
+  row-gap: 20px;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1828,17 +1879,22 @@ p {
   border-radius: 9999px;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .rounded-b {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-b-xl {
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
 }
 
 .rounded-e {
@@ -1864,6 +1920,11 @@ p {
 .rounded-t {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+}
+
+.rounded-t-none {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 .rounded-bl {
@@ -1987,11 +2048,6 @@ p {
   border-color: rgb(152 162 179 / var(--tw-border-opacity));
 }
 
-.border-Gray-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(234 236 240 / var(--tw-border-opacity));
-}
-
 .bg-Brand-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(91 186 131 / var(--tw-bg-opacity));
@@ -2007,6 +2063,11 @@ p {
   background-color: rgb(234 236 240 / var(--tw-bg-opacity));
 }
 
+.bg-Gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(208 213 221 / var(--tw-bg-opacity));
+}
+
 .bg-Gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -2015,11 +2076,6 @@ p {
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-Gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(208 213 221 / var(--tw-bg-opacity));
 }
 
 .decoration-slice {
@@ -2154,9 +2210,35 @@ p {
   padding-right: 24px;
 }
 
+.px-7 {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.px-8 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
 .py-4 {
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+.pb-2 {
+  padding-bottom: 8px;
+}
+
+.pb-4 {
+  padding-bottom: 16px;
+}
+
+.pr-1 {
+  padding-right: 4px;
+}
+
+.pt-1 {
+  padding-top: 4px;
 }
 
 .text-left {
@@ -2215,12 +2297,32 @@ p {
   vertical-align: super;
 }
 
+.font-noto-sans-mono {
+  font-family: Noto Sans Mono;
+}
+
 .text-7xl {
   font-size: 4.5rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .font-semibold {

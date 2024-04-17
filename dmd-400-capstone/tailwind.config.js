@@ -17,10 +17,13 @@ export const theme = {
     4: "16px",
     5: "20px",
     6: "24px",
+    7: "28px",
     8: "32px",
     12: "48px",
     14: "56px",
     24: "96px",
+    28: "112px",
+    48: "192px",
     60: "240px",
     90: "340px"
   },
@@ -159,8 +162,8 @@ export const theme = {
     },
   },
   fontSize: {
-    xs: "0.75rem",
-    sm: "0.875rem",
+    xs: "0.75rem", //12px
+    sm: "0.875rem", //14px
     base: "1rem", //16px
     lg: "1.125rem",
     xl: "1.25rem",
@@ -188,7 +191,10 @@ export const plugins = [
   plugin(function ({ addBase, theme }) {
     addBase({
       h1: { fontFamily: theme("fontFamily.karla") },
-      h2: { fontFamily: theme("fontFamily.karla") },
+      h2: { 
+            fontFamily: theme("fontFamily.karla"),
+            fontSize: theme("fontSize[5xl]")
+          },
       h3: { fontFamily: theme("fontFamily.karla") },
       h4: { fontFamily: theme("fontFamily.karla") },
       h5: { fontFamily: theme("fontFamily.karla") },
