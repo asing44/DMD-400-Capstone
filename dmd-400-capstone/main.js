@@ -3,10 +3,28 @@ import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import * as rive from "@rive-app/canvas";
 import Lenis from "@studio-freight/lenis";
 
-gsap.registerPlugin(ScrollTrigger);
+// ======================
+// Section: GSAP
+// ======================
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+gsap.registerEffect({
+  name: 'rotateIn',
+  extendTimeline: true,
+  defaults: {
+    duration: 1,
+    rotationY: 0,
+    rotationX: 0,
+    transformOrigin: '50% 50%',
+    ease: 'back',
+    parent: '.wrap',
+  }
+});
 
 // ======================
 // Section: Initialization
@@ -86,7 +104,6 @@ function screenMoving() {
 
 // Navigation pinning
 let nav = document.getElementsByClassName("nav")[0];
-console.log(nav)
 
 let retractNav_anim = gsap
   .timeline({
@@ -103,6 +120,7 @@ gsap.to(nav, {
     trigger: ".main",
     start: "top top",
     pin: ".nav",
+    pinSpacing: false,
     onUpdate: (self) => {
       let scrollDirection = self.direction; // 1 for down, -1 for up
       let currentScrollTop = self.scroll(); // Current scroll position
@@ -118,3 +136,17 @@ gsap.to(nav, {
     },
   }
 })
+
+// ======================
+// Section: Hero
+// ======================
+
+window.seeMore = function () {
+  gsap.to(window, {
+    duration: 1.25,
+    scrollTo: {
+      y: ".features",
+    },
+    ease: "power2.inOut"
+  });
+};

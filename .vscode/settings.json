@@ -1,5 +1,5 @@
 {
-    "svg.preview.background": "transparent",
+    "svg.preview.background": "editor",
     "commit-message-editor.staticTemplate": [
         "{type}{scope}: {description}",
         "",

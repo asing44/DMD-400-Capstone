@@ -10,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
     </head>
+    <script type="module" src="/main.js"></script>
     <body id="body" class="relative p-20 bg-Electric_blue-800 text-Gray-400">
         <div class="alert invisible md:visible flex fixed h-full w-full justify-center items-center right-0 top-0 bg-Gray-800 z-50">
             <p class="alert__copy text-4xl text-Gray-50 text-center font-bold">This display size is still under production<span class="animate-[pulse_2s_ease-in-out_infinite]">.</span><span class="animate-[pulse_2s_ease-in-out_infinite_0.2s]">.</span><span class="animate-[pulse_2s_ease-in-out_infinite_0.4s]">.</span></p>
-
         </div>
         <!--  -->
-        <main class="main relative bg-Gray-50 rounded-3xl overflow-hidden">
+        <main class="main relative bg-Gray-50 bg-clip-content rounded-3xl overflow-hidden">
+            
             <nav class="nav absolute w-full flex justify-between items-baseline p-40 backdrop-blur-sm z-50">
                 <!-- Nav left -->
                 <a class="__C nav__logo-container flex items-baseline gap-x-20 cursor-pointer" href="index.html">
@@ -29,7 +30,7 @@
                 </a>
                 <!--  -->
                 <!-- Nav right -->
-                <div class="__C nav__button-container flex bg-Gray-25 backdrop-blur-sm cursor-pointer">
+                <div class="__C nav__button-container flex backdrop-blur-sm cursor-pointer">
                     <img src="svg/Capstone-Project__Menu-Button--Mobile_v1_04182024.svg" alt="Menu button" class="img h-full" height="48" width="48">
                 </div>
             </nav>
@@ -53,13 +54,13 @@
                 </div>
             </div>
             <!-- Hero -->
-            <section class="hero relative w-full flex flex-col mt-40 rounded-3xl overflow-hidden">
+            <section class="section hero relative w-full flex flex-col mt-40 rounded-t-3xl bg-White overflow-hidden">
 
                 <!-- Main -->
                 <div class="hero__main flex flex-col gap-y-90 pb-60 text-Gray-500 overflow-hidden">
 
                     <!-- Bottom overlay -->
-                    <div class="__W hero__overlay-wrapper absolute h-100 w-full bottom-0 left-0 bg-gradient-to-t from-Gray-500 to-transparent opacity-60">
+                    <div class="__W hero__overlay-wrapper absolute h-100 w-full bottom-0 left-0 bg-gradient-to-t from-Gray-500 opacity-60">
                     </div>
 
                     <!-- Copy -->
@@ -67,15 +68,15 @@
 
                         <!-- Top -->
                         <div class="flex">
-                            <div class="__W hero__h1-wrapper relative w-fit px-40 py-30 aspect-3/2 border-leaf__tr bg-Gray-25 backdrop-blur-sm z-30">
+                            <div class="__W hero__h1-wrapper relative w-fit px-40 py-30 aspect-3/2 border-leaf__tr bg-Gray-100 backdrop-blur-sm z-30">
                                 <h1 class="h1 hero__h1 display_md font-normal"><span class="hero__h1--not-green">A</span> <span class="hero__h1--green underline decoration-Brand-400 decoration-2">modular<br>gardening<br>system.</span></h1>
                             </div>
                         </div>
 
                         <!-- Bottom -->
                         <div class="relative flex pl-60">
-                            <div class="__W hero__tagline-wrapper flex w-fit place-self-end flex-col items-end gap-x-20 px-40 py-30 border-leaf__tl bg-Gray-25 backdrop-blur-sm -translate-y-50">
-                                <p class="hero-tagline__top display_sm text-Gray-500 font-light whitespace-nowrap">cultivate your nice,</p>
+                            <div class="__W hero__tagline-wrapper flex w-fit place-self-end flex-col items-end gap-x-20 px-40 py-30 border-leaf__tl bg-Gray-100 backdrop-blur-sm -translate-y-50">
+                                <p class="hero-tagline__top display_sm text-Gray-500 whitespace-nowrap">cultivate your nice,</p>
                                 <p class="hero-tagline__bottom border-leaf__tr--sm bg-Brand-300 px-20 py-10 display_sm text-Gray-25 italic">smartly</p>
                             </div>
                             <div class="absolute top-[-14px] left-[11px] scale-150 z-10">
@@ -88,9 +89,9 @@
                     </div>
 
                     <!-- See more CTA -->
-                    <div class="__C hero__see-more-container flex relative flex-col place-items-center gap-y-50 z-40 back">
+                    <button class="__C hero__see-more-container flex relative flex-col place-items-center gap-y-50 cursor-pointer z-40" onclick="seeMore()">
                         <p class="hero__see-more-copy text-lg  text-Gray-500 font-thin tracking-widest backdrop-blur-sm animate-[pulse_3s_ease-in-out_infinite]">see more</p>
-                        <a class="hero__see-more-button backdrop-blur-sm animate-[bounce_5s_ease-in-out_infinite]">
+                        <div class="hero__see-more-button backdrop-blur-sm animate-[bounce_5s_ease-in-out_infinite]">
                             <svg class="svg hero__see-more-button-wrapper" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="arrow-circle-down-svgrepo-com 1" clip-path="url(#clip0_393_415)">
                                     <path class="stroke-Gray-500" id="Vector"
@@ -105,8 +106,8 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                        </a>
-                    </div>
+                        </div>
+                    </button>
                 </div>
 
                 <!-- Static background -->
@@ -115,8 +116,17 @@
                 </div>
             </section>
             <!-- Features and benefits -->
-            <section class="temp h-[100vh]"></section>
+            <section class="section features relative h-[100vh]">
+
+                <!-- Transition overlay -->
+                <div class="__W features__overlay-wrapper h-60 w-full top-0 left-0 bg-gradient-to-b from-Gray-500 to-Gray-500 opacity-60 backdrop-blur-lg">
+                </div>
+                <div class="__W features__overlay-wrapper h-90 w-full top-0 left-0 bg-gradient-to-b from-Gray-500 opacity-60">
+                </div>
+                
+                <p class="tag features__tag">features</p>
+                <h2 class="h2 features_h2 display_md">What is Smart Garden?</h2>
+            </section>
         </main>
     </body>
-    <script type="module" src="/main.js"></script>
 </html> 
