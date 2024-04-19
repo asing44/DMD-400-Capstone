@@ -10,13 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
     </head>
-    <body id="body" class="relative p-20 bg-Electric_blue-800">
+    <body id="body" class="relative p-20 bg-Electric_blue-800 text-Gray-400">
         <div class="alert invisible md:visible flex fixed h-full w-full justify-center items-center right-0 top-0 bg-Gray-800 z-50">
             <p class="alert__copy text-4xl text-Gray-50 text-center font-bold">This display size is still under production<span class="animate-[pulse_2s_ease-in-out_infinite]">.</span><span class="animate-[pulse_2s_ease-in-out_infinite_0.2s]">.</span><span class="animate-[pulse_2s_ease-in-out_infinite_0.4s]">.</span></p>
 
         </div>
         <!--  -->
-        <main class="main bg-Gray-50 min-h-[50vh] rounded-3xl">
+        <main class="main bg-Gray-50 rounded-3xl">
             <nav class="nav flex justify-between p-40">
                 <!-- Nav left -->
                 <div class="__C nav__logo-container flex items-baseline gap-x-20">
@@ -33,18 +33,57 @@
                     <img src="svg/Capstone-Project__Menu-Button--Mobile_v1_04182024.svg" alt="Menu button" class="img h-full" height="40" width="40">
                 </div>
             </nav>
-            <section class="hero relative rounded-3xl overflow-y-hidden">
+            <section class="hero relative flex flex-col mt-40 rounded-3xl overflow-y-hidden">
+
                 <!-- Bottom overlay -->
-                <div class="__W hero__overlay-wrapper absolute w-full aspect-2/1 bottom-0 bg-gradient-to-t from-Gray-500 to-transparent"></div>
-                <!-- Copy -->
-                <div class="hero__copy">
-                    <!-- Top -->
-                    <div class="__W hero__h1-wrapper w-fit ml-60 border border-leaf__1">
-                        <h1 class="h1 hero__h1 px-40 py-30 display_md text-Gray-500 font-medium"><span class="hero__h1--not-green italic font-light">A</span> <span class="hero__h1--green text-Brand-300">modular<br>gardening<br>system.</span></h1>
+                <div class="__W hero__overlay-wrapper absolute w-full aspect-2/1 bottom-0 right-0 bg-gradient-to-t from-Gray-500 to-transparent opacity-60"></div>
+
+                <!-- Main -->
+                <div class="hero__main flex w-screen flex-col gap-y-90 pb-60 text-Gray-500">
+
+                    <!-- Copy -->
+                    <div class="hero__copy flex relative w-fit place-self-center flex-col pl-60 pr-60  drop-shadow-md">
+
+                        <!-- Top -->
+                        <div class="__W hero__h1-wrapper relative w-fit px-40 py-30 aspect-3/2 border-leaf__tr bg-Gray-200 z-30">
+                            <h1 class="h1 hero__h1 display_md font-normal"><span class="hero__h1--not-green font-light">A</span> <span class="hero__h1--green underline decoration-Brand-400 decoration-2 font-light">modular<br>gardening<br>system.</span></h1>
+                        </div>
+
+                        <!-- Bottom -->
+                        <div class="__W hero__tagline-wrapper flex w-fit place-self-end flex-col items-end gap-x-20 px-40 py-30 border-leaf__tl bg-Gray-200 -translate-y-50">
+                            <p class="hero-tagline__top display_sm text-Gray-500 font-light">cultivate your nice,</p>
+                            <p class="hero-tagline__bottom border-leaf__tr--sm bg-Brand-300 px-20 py-10 display_sm text-Gray-25 italic">smartly</p>
+                        </div>
+
+                        <div class="absolute top-[195px] left-[10px] scale-150 z-10">
+                            <img src="svg/Hero__Background-Top.svg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- See more CTA -->
+                    <div class="__C hero__see-more-container flex flex-col place-items-center gap-y-50">
+                        <p class="hero__see-more-copy text-lg  text-Gray-400 font-thin tracking-widest">see more</p>
+                        <a class="hero__see-more-button">
+                            <svg class="svg hero__see-more-button-wrapper" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="arrow-circle-down-svgrepo-com 1" clip-path="url(#clip0_393_415)">
+                                    <path id="Vector"
+                                        d="M20 39.4595C30.7471 39.4595 39.4595 30.7471 39.4595 20C39.4595 9.25282 30.7471 0.540527 20 0.540527C9.25282 0.540527 0.540527 9.25282 0.540527 20C0.540527 30.7471 9.25282 39.4595 20 39.4595Z"
+                                        stroke="#667085" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path id="Vector_2" d="M13.1306 17.5481L19.9999 24.3978L26.8691 17.5481" stroke="#667085" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_393_415">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
                     </div>
                 </div>
+
                 <!-- Static background -->
-                <img src="png/Capstone-Project__Hero-Background--Static_v2_04182024.png" alt="" class="hero__background mix-blend-darken">
+                <img src="png/Capstone-Project__Hero-Background--Static_v2_04182024.png" alt="" class="hero__background absolute h-full bottom-0 mix-blend-darken">
             </section>
         </main>
     </body>

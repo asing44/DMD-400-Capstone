@@ -1,0 +1,14 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="arrow-circle-down-svgrepo-com 1" clip-path="url(#clip0_393_415)">
+        <path id="Vector"
+            d="M20 39.4595C30.7471 39.4595 39.4595 30.7471 39.4595 20C39.4595 9.25282 30.7471 0.540527 20 0.540527C9.25282 0.540527 0.540527 9.25282 0.540527 20C0.540527 30.7471 9.25282 39.4595 20 39.4595Z"
+            stroke="#667085" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path id="Vector_2" d="M13.1306 17.5481L19.9999 24.3978L26.8691 17.5481" stroke="#667085" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <defs>
+        <clipPath id="clip0_393_415">
+            <rect width="40" height="40" fill="white" />
+        </clipPath>
+    </defs>
+</svg>

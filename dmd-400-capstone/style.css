@@ -9,7 +9,6 @@
 
     html {
         min-height: 100dvh;
-        font-optical-sizing: auto;
         font-kerning: auto;
     }
 }
@@ -18,9 +17,23 @@
 /* Section: Reusable Styles */
 /* ====================== */
 
-.border-leaf__1 {
+.border-leaf__tr {
     border-top-right-radius: 1.5rem;
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 1.5rem;
     border-top-left-radius: 0.25rem;
+}
+
+.border-leaf__tr--sm {
+    border-top-right-radius: 0.125rem;
+    border-bottom-right-radius: 0.75rem;
+    border-bottom-left-radius: 0.125rem;
+    border-top-left-radius: 0.75rem;
+}
+
+.border-leaf__tl {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 1.5rem;
 }
