@@ -11,23 +11,20 @@ export const theme = {
     "2xl": "1536px",
   },
   spacing: {
-    1: "4px",
-    2: "8px",
-    3: "12px",
-    4: "16px",
-    5: "20px",
-    6: "24px",
-    7: "28px",
-    8: "32px",
-    12: "48px",
-    14: "56px",
-    17: "68px",
-    24: "96px",
-    28: "112px",
-    45: "180px",
-    48: "192px",
-    60: "240px",
-    90: "340px"
+    0: "0px",
+    5: "2px",
+    10: "4px",
+    20: "8px",
+    30: "12px",
+    40: "16px",
+    50: "24px",
+    60: "40px",
+    70: "68px",
+    80: "112px",
+    90: "180px",
+    100: "292px",
+    110: "472px",
+    120: "764px",
   },
   colors: {
     White: "#ffffff",
@@ -97,7 +94,7 @@ export const theme = {
       800: "#05603a",
       900: "#054f31",
     },
-    "Electric blue": {
+    Electric_blue: {
       25: "#ddeff8",
       50: "#cce7f5",
       100: "#bbdff2",
@@ -164,17 +161,13 @@ export const theme = {
     },
   },
   fontSize: {
-    xs: "0.75rem", //12px
-    sm: "0.875rem", //14px
-    base: "1rem", //16px
-    lg: "1.125rem",
-    xl: "1.25rem",
-    "2xl": "1.5rem",
-    "3xl": "1.875rem",
-    "4xl": "2.25rem",
-    "5xl": "3rem",
-    "6xl": "3.75rem",
-    "7xl": "4.5rem",
+    xs: "0.375rem",
+    sm: "0.625rem",
+    base: "1rem",
+    lg: "1.625rem",
+    xl: "2.625rem",
+    "2xl": "4.25rem",
+    "3xl": "6.875rem",
   },
   fontFamily: {
     karla: "Karla",
@@ -182,27 +175,70 @@ export const theme = {
   },
   extend: {
     aspectRatio: {
-      '1/2': '1 / 2',
-      '2/1': '2 / 1',
-      '2/3': '2 / 3',
-      '3/2': '3 / 2',
-      '4/3': '4 / 3',
-      '16/9': '16 / 9'
-    }
+      "1/2": "1 / 2",
+      "2/1": "2 / 1",
+      "2/3": "2 / 3",
+      "3/2": "3 / 2",
+      "4/3": "4 / 3",
+      "3/4": "3 / 4",
+      "16/9": "16 / 9",
+      "9/16": "9/16",
+    },
   },
 };
 export const plugins = [
   plugin(function ({ addBase, theme }) {
     addBase({
-      h1: { fontFamily: theme("fontFamily.karla") },
-      h2: { 
-            fontFamily: theme("fontFamily.karla"),
-            fontSize: theme("fontSize[5xl]")
-          },
-      h3: { fontFamily: theme("fontFamily.karla") },
-      h4: { fontFamily: theme("fontFamily.karla") },
-      h5: { fontFamily: theme("fontFamily.karla") },
-      p: { fontFamily: theme("fontFamily.noto-sans-mono") },
+      ".display_xl": {
+        fontFamily: theme("fontFamily.karla"),
+        fontSize: theme("fontSize[3xl]"),
+        leading: theme("leading[9rem]"),
+      },
+      ".display_lg": {
+        fontFamily: theme("fontFamily.karla"),
+        fontSize: theme("fontSize[2xl]"),
+        leading: theme("leading[5.5rem]"),
+      },
+      ".display_md": {
+        fontFamily: theme("fontFamily.karla"),
+        fontSize: theme("fontSize[xl]"),
+        leading: theme("leading[56px]"),
+      },
+      ".display_sm": {
+        fontFamily: theme("fontFamily.karla"),
+        fontSize: theme("fontSize[lg]"),
+        leading: theme("leading[2rem]"),
+      },
+      ".body_xxl": {
+        fontFamily: theme("fontFamily.noto-sans-mono"),
+        fontSize: theme("fontSize[2xl]"),
+        leading: theme("leading[5.5rem]"),
+      },
+      ".body_xl": {
+        fontFamily: theme("fontFamily.noto-sans-mono"),
+        fontSize: theme("fontSize[xl]"),
+        leading: theme("leading[3.5rem]"),
+      },
+      ".body_lg": {
+        fontFamily: theme("fontFamily.noto-sans-mono"),
+        fontSize: theme("fontSize[lg]"),
+        leading: theme("leading[2rem]"),
+      },
+      ".body_md": {
+        fontFamily: theme("fontFamily.noto-sans-mono"),
+        fontSize: theme("fontSize[base]"),
+        leading: theme("leading[1.5rem]"),
+      },
+      ".body_sm": {
+        fontFamily: theme("fontFamily.noto-sans-mono"),
+        fontSize: theme("fontSize[sm]"),
+        leading: theme("leading[1rem]"),
+      },
+      ".body_xs": {
+        fontFamily: theme("fontFamily.noto-sans-mono"),
+        fontSize: theme("fontSize[xs]"),
+        leading: theme("leading[0.5rem]"),
+      },
     });
   }),
 ];

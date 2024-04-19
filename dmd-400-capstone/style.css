@@ -2,64 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ======================
-   Section: Initialization
-/* ======================
-
 @layer base {
+    *, ::before, ::after {
+        box-sizing: border-box;
+    }
+
     html {
         min-height: 100dvh;
         font-optical-sizing: auto;
-    }
-
-    h1 {
-        line-height: 90px;
-        letter-spacing: -1.44px;
-    }
-
-    h2 {
-        line-height: 60px
-    }
-
-    p {
-        line-height: 24px;
+        font-kerning: auto;
     }
 }
 
-/* ======================
-   Section: Animation
-/* ======================
+/* ====================== */
+/* Section: Reusable Styles */
+/* ====================== */
 
-/* How it works animations classes */
-.animation__hw--active {
-    flex-grow: 1;
-    margin-right: theme('spacing.1');
-    padding: theme('spacing.1') theme('spacing.3') theme('spacing.1') theme('spacing.3');
-    border: 1px solid theme('colors.Gray.300');
-    border-radius: theme('spacing.3');
-    background-color: theme('colors.Gray.200');
-    font-size: theme('fontSize.lg');
-    color: theme('colors.Gray.500');
-    text-wrap: nowrap;
-}
-
-/* h-2/3 aspect-square mr-1 rounded-md border-Gray-300 bg-Gray-200 */
-
-.animation__hw--queued {
-    height: 65%;
-    aspect-ratio: 1 / 1;
-    margin-right: theme('spacing.1');
-    border: 1px solid theme('colors.Gray.300');
-    border-radius: 0.5rem;
-    background-color: theme('colors.Gray.200');
-}
-
-/* h-4 aspect-square rounded-full border-Gray-200 bg-Gray-100 */
-
-.animation__hw--inactive {
-    height: 50%;
-    aspect-ratio: 1 / 1;
-    border: 1px solid theme('colors.Gray.200');
-    border-radius: 0.5rem;
-    background-color: theme('colors.Gray.100');
+.border-leaf__1 {
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 1.5rem;
+    border-top-left-radius: 0.25rem;
 }

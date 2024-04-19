@@ -10,95 +10,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
     </head>
-    <body id="body" class="mx-4 mt-4 bg-Gray-50">
-        <nav class="nav flex justify-between items-center px-2 py-4 rounded-xl border-2 border-Gray-300 bg-Gray-200">
-            <button class="btn nav__btn flex items-center max-h-12 basis-auto px-6 py-4 border border-Brand-300 rounded-tr rounded-br-lg rounded-tl-lg rounded-bl bg-Brand-300 sm:bg-Brand-200 sm:hover:bg-Brand-300 text-Gray-25 font-semibold">signup</button>
-            <div class="flex justify-center items-center gap-4 p-2 rounded-xl border border-Gray-300 bg-Gray-100">
-                <a class="w-8 flex-shrink-0" href="./index.html">
-                    <img src="/svg/logo--no-text.svg">
-                </a>
-                <button class="btn nav__button flex relative h-full w-12 justify-center items-center aspect-square rounded-full">
-                    <canvas id="navButton" class="absolute h-full " width="50" height="50"></canvas>
-                </button>
-            </div>
-        </nav>
-        <section class="section hero flex justify-center flex-col gap-y-12 mt-8 px-6">
-            <div class="hero__container">
-                <h1 class="flex flex-col justify-center text-7xl text-Gray-600 font-bold">
-                    <span class="text-center">Smart</span>
-                    <span class="-mt-6 text-center">Garden</span>
-                </h1>
-                <p class="text-center text-wrap text-Gray-500">The modular gardening system that is totally awesome cool!</p>
-            </div>
-            <div class="hero__animation flex justify-center align-middle p-6 border rounded-xl border-Gray-300 bg-Gray-200">
-                <div class="placeholder min-h-90 flex-auto border border-Gray-300 rounded-lg bg-Gray-100"></div>
-            </div>
-        </section>
-        <section class="section fb flex flex-col gap-y-8 mt-12">
-            <header class="header fb__header">
-                <h2 class="h2 fb__heading font-medium text-Gray-500">Features and benefits</h2>
-            </header>
-            <!-- cards -->
-            <div class="container cards fb__cards flex flex-row-reverse px-2 gap-x-4">
-                <div class="container cards__right flex flex-col gap-y-5">
-                    <div class="container cards__card flex aspect-2/3 flex-col justify-start items-middle pt-1 px-2 pb-4 border border-Gray-300 rounded-xl bg-Gray-200">
-                        <p class="cards__tag pr-1 pb-2 text-sm font-normal text-Gray-500 text-right">feature</p>
-                        <div class="container cards__graphic min-h-48 flex-auto border border-Gray-300 rounded-xl bg-Gray-100 z-20"></div>
-                        <div class="container cards__name flex flex-col min-h-14 max-h-24 justify-end items-center pb-2 px-8 border border-Gray-400 rounded-t-none rounded-b-xl bg-Gray-300 -translate-y-4 z-10">
-                            <h3 class="cards__copy font-noto-sans-mono text-lg text-Gray-500 ">Name</h3>
-                        </div>
+    <body id="body" class="relative p-20 bg-Electric_blue-800">
+        <div class="alert invisible md:visible flex fixed h-full w-full justify-center items-center right-0 top-0 bg-Gray-800 z-50">
+            <p class="alert__copy text-4xl text-Gray-50 text-center font-bold">This display size is still under production<span class="animate-[pulse_2s_ease-in-out_infinite]">.</span><span class="animate-[pulse_2s_ease-in-out_infinite_0.2s]">.</span><span class="animate-[pulse_2s_ease-in-out_infinite_0.4s]">.</span></p>
+
+        </div>
+        <!--  -->
+        <main class="main bg-Gray-50 min-h-[50vh] rounded-3xl">
+            <nav class="nav flex justify-between p-40">
+                <!-- Nav left -->
+                <div class="__C nav__logo-container flex items-baseline gap-x-20">
+                    <div class="__C nav__logo">
+                        <img src="svg/Capstone__Logo--alt.svg" alt="" class="img">
                     </div>
-                    <div class="container cards__card flex aspect-2/3 flex-col justify-start items-middle pt-1 px-2 pb-4 border border-Gray-300 rounded-xl bg-Gray-200">
-                        <p class="cards__tag pr-1 pb-2 text-sm font-normal text-Gray-500 text-right">feature</p>
-                        <div class="container cards__graphic min-h-48 flex-auto border border-Gray-300 rounded-xl bg-Gray-100 z-20"></div>
-                        <div class="container cards__name flex flex-col min-h-14 max-h-24 justify-end items-center pb-2 px-8 border border-Gray-400 rounded-t-none rounded-b-xl bg-Gray-300 -translate-y-4 z-10">
-                            <h3 class="cards__copy font-noto-sans-mono text-lg text-Gray-500 ">Name</h3>
-                        </div>
+                    <div class="__C nav__name-container">
+                        <span class="nav__name-smart display_sm text-Electric_blue-700 font-bold">Smart</span><span class="nav__name-garden display_sm text-Electric_blue-700 font-thin">Garden</span>
                     </div>
                 </div>
-                <div class="container cards__left flex flex-col gap-y-5 mt-8">
-                    <div class="container cards__card flex aspect-2/3 flex-col justify-start items-middle pt-1 px-2 pb-4 border border-Gray-300 rounded-xl bg-Gray-200">
-                        <p class="cards__tag pr-1 pb-2 text-sm font-normal text-Gray-500 text-right">feature</p>
-                        <div class="container cards__graphic min-h-48 flex-auto border border-Gray-300 rounded-xl bg-Gray-100 z-20"></div>
-                        <div class="container cards__name flex flex-col min-h-14 max-h-24 justify-end items-center pb-2 px-8 border border-Gray-400 rounded-t-none rounded-b-xl bg-Gray-300 -translate-y-4 z-10">
-                            <h3 class="cards__copy font-noto-sans-mono text-lg text-Gray-500 ">Name</h3>
-                        </div>
-                    </div>
-                    <div class="container cards__card flex aspect-2/3 flex-col justify-start items-middle pt-1 px-2 pb-4 border border-Gray-300 rounded-xl bg-Gray-200">
-                        <p class="cards__tag pr-1 pb-2 text-sm font-normal text-Gray-500 text-right">feature</p>
-                        <div class="container cards__graphic min-h-48 flex-auto border border-Gray-300 rounded-xl bg-Gray-100 z-20"></div>
-                        <div class="container cards__name flex flex-col min-h-14 max-h-24 justify-end items-center pb-2 px-8 border border-Gray-400 rounded-t-none rounded-b-xl bg-Gray-300 -translate-y-4 z-10">
-                            <h3 class="cards__copy font-noto-sans-mono text-lg text-Gray-500 ">Name</h3>
-                        </div>
+                <!--  -->
+                <!-- Nav right -->
+                <div class="__C nav__button-container flex">
+                    <img src="svg/Capstone-Project__Menu-Button--Mobile_v1_04182024.svg" alt="Menu button" class="img h-full" height="40" width="40">
+                </div>
+            </nav>
+            <section class="hero relative rounded-3xl overflow-y-hidden">
+                <!-- Bottom overlay -->
+                <div class="__W hero__overlay-wrapper absolute w-full aspect-2/1 bottom-0 bg-gradient-to-t from-Gray-500 to-transparent"></div>
+                <!-- Copy -->
+                <div class="hero__copy">
+                    <!-- Top -->
+                    <div class="__W hero__h1-wrapper w-fit ml-60 border border-leaf__1">
+                        <h1 class="h1 hero__h1 px-40 py-30 display_md text-Gray-500 font-medium"><span class="hero__h1--not-green italic font-light">A</span> <span class="hero__h1--green text-Brand-300">modular<br>gardening<br>system.</span></h1>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="section hw flex flex-col gap-y-8 mt-12">
-            <header class="header hw__header">
-                <h2 class="h2 fb__heading font-medium text-Gray-500">How it works</h2>
-            </header>
-            <!-- main -->
-            <div class="wrapper hw__wrapper flex justify-end px-2">
-                <div class="container hw__main main flex flex-col items-end gap-y-2">
-                    <!-- Top row -->
-                    <div class="container main__top flex items-center gap-x-1 pr-4 pl-12">
-                        <div class="main__process animation__hw--active"># Process</div>
-                        <!-- ? Should I create animation level classes? -->
-                        <div class="border main__process animation__hw--queued"></div>
-                        <!--  -->
-                        <div class="border main__process animation__hw--inactive"></div>
-                        <div class="border main__process animation__hw--inactive"></div>
-                        <div class="border main__process animation__hw--inactive"></div>
-                    </div>
-                    <div class="wrapper main__graphic w-full aspect-3/2 border rounded-xl border-Gray-300 bg-Gray-200"></div>
-                    <div class="border container main__controls flex flex-row-reverse">
-                        <div class="wrapper main__control--right"></div>
-                        <div class="wrapper main__control--left"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <!-- Static background -->
+                <img src="png/Capstone-Project__Hero-Background--Static_v2_04182024.png" alt="" class="hero__background mix-blend-darken">
+            </section>
+        </main>
     </body>
     <script type="module" src="/main.js"></script>
 </html> 
