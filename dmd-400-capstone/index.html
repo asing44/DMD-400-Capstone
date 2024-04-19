@@ -16,60 +16,87 @@
 
         </div>
         <!--  -->
-        <main class="main bg-Gray-50 rounded-3xl">
-            <nav class="nav flex justify-between p-40">
+        <main class="main relative bg-Gray-50 rounded-3xl overflow-hidden">
+            <nav class="nav absolute w-full flex justify-between items-baseline p-40 backdrop-blur-sm z-50">
                 <!-- Nav left -->
-                <div class="__C nav__logo-container flex items-baseline gap-x-20">
+                <a class="__C nav__logo-container flex items-baseline gap-x-20 cursor-pointer" href="index.html">
                     <div class="__C nav__logo">
                         <img src="svg/Capstone__Logo--alt.svg" alt="" class="img">
                     </div>
                     <div class="__C nav__name-container">
                         <span class="nav__name-smart display_sm text-Electric_blue-700 font-bold">Smart</span><span class="nav__name-garden display_sm text-Electric_blue-700 font-thin">Garden</span>
                     </div>
+                </a>
+                <!--  -->
+                <!-- Nav right -->
+                <div class="__C nav__button-container flex bg-Gray-25 backdrop-blur-sm cursor-pointer">
+                    <img src="svg/Capstone-Project__Menu-Button--Mobile_v1_04182024.svg" alt="Menu button" class="img h-full" height="48" width="48">
+                </div>
+            </nav>
+            <!-- Dup nav for spacing -->
+            <div class="nav-spacing w-full flex justify-between items-baseline p-40 invisible">
+                <!-- Nav left -->
+                <div class="__C nav__logo-container flex items-baseline gap-x-20">
+                    <div class="__C nav__logo">
+                        <img src="svg/Capstone__Logo--alt.svg" alt="" class="img">
+                    </div>
+                    <div class="__C nav__name-container">
+                        <span class="nav__name-smart display_sm text-Electric_blue-700 font-bold">Smart</span><span
+                            class="nav__name-garden display_sm text-Electric_blue-700 font-thin">Garden</span>
+                    </div>
                 </div>
                 <!--  -->
                 <!-- Nav right -->
-                <div class="__C nav__button-container flex">
-                    <img src="svg/Capstone-Project__Menu-Button--Mobile_v1_04182024.svg" alt="Menu button" class="img h-full" height="40" width="40">
+                <div class="__C nav__button-container flex bg-Gray-25 backdrop-blur-sm">
+                    <img src="svg/Capstone-Project__Menu-Button--Mobile_v1_04182024.svg" alt="Menu button" class="img h-full"
+                        height="48" width="48">
                 </div>
-            </nav>
-            <section class="hero relative flex flex-col mt-40 rounded-3xl overflow-y-hidden">
-
-                <!-- Bottom overlay -->
-                <div class="__W hero__overlay-wrapper absolute w-full aspect-2/1 bottom-0 right-0 bg-gradient-to-t from-Gray-500 to-transparent opacity-60"></div>
+            </div>
+            <!-- Hero -->
+            <section class="hero relative w-full flex flex-col mt-40 rounded-3xl overflow-hidden">
 
                 <!-- Main -->
-                <div class="hero__main flex w-screen flex-col gap-y-90 pb-60 text-Gray-500">
+                <div class="hero__main flex flex-col gap-y-90 pb-60 text-Gray-500 overflow-hidden">
+
+                    <!-- Bottom overlay -->
+                    <div class="__W hero__overlay-wrapper absolute h-100 w-full bottom-0 left-0 bg-gradient-to-t from-Gray-500 to-transparent opacity-60">
+                    </div>
 
                     <!-- Copy -->
-                    <div class="hero__copy flex relative w-fit place-self-center flex-col pl-60 pr-60  drop-shadow-md">
+                    <div class="hero__copy inline-flex relative place-self-center flex-col gap-y-60 px-60 drop-shadow">
 
                         <!-- Top -->
-                        <div class="__W hero__h1-wrapper relative w-fit px-40 py-30 aspect-3/2 border-leaf__tr bg-Gray-200 z-30">
-                            <h1 class="h1 hero__h1 display_md font-normal"><span class="hero__h1--not-green font-light">A</span> <span class="hero__h1--green underline decoration-Brand-400 decoration-2 font-light">modular<br>gardening<br>system.</span></h1>
+                        <div class="flex">
+                            <div class="__W hero__h1-wrapper relative w-fit px-40 py-30 aspect-3/2 border-leaf__tr bg-Gray-25 backdrop-blur-sm z-30">
+                                <h1 class="h1 hero__h1 display_md font-normal"><span class="hero__h1--not-green">A</span> <span class="hero__h1--green underline decoration-Brand-400 decoration-2">modular<br>gardening<br>system.</span></h1>
+                            </div>
                         </div>
 
                         <!-- Bottom -->
-                        <div class="__W hero__tagline-wrapper flex w-fit place-self-end flex-col items-end gap-x-20 px-40 py-30 border-leaf__tl bg-Gray-200 -translate-y-50">
-                            <p class="hero-tagline__top display_sm text-Gray-500 font-light">cultivate your nice,</p>
-                            <p class="hero-tagline__bottom border-leaf__tr--sm bg-Brand-300 px-20 py-10 display_sm text-Gray-25 italic">smartly</p>
-                        </div>
-
-                        <div class="absolute top-[195px] left-[10px] scale-150 z-10">
+                        <div class="relative flex pl-60">
+                            <div class="__W hero__tagline-wrapper flex w-fit place-self-end flex-col items-end gap-x-20 px-40 py-30 border-leaf__tl bg-Gray-25 backdrop-blur-sm -translate-y-50">
+                                <p class="hero-tagline__top display_sm text-Gray-500 font-light whitespace-nowrap">cultivate your nice,</p>
+                                <p class="hero-tagline__bottom border-leaf__tr--sm bg-Brand-300 px-20 py-10 display_sm text-Gray-25 italic">smartly</p>
+                            </div>
+                            <div class="absolute top-[-14px] left-[11px] scale-150 z-10">
                             <img src="svg/Hero__Background-Top.svg" alt="">
                         </div>
+                        </div>
+
+                        <!-- Green background -->
+                        
                     </div>
 
                     <!-- See more CTA -->
-                    <div class="__C hero__see-more-container flex flex-col place-items-center gap-y-50">
-                        <p class="hero__see-more-copy text-lg  text-Gray-400 font-thin tracking-widest">see more</p>
-                        <a class="hero__see-more-button">
+                    <div class="__C hero__see-more-container flex relative flex-col place-items-center gap-y-50 z-40 back">
+                        <p class="hero__see-more-copy text-lg  text-Gray-500 font-thin tracking-widest backdrop-blur-sm animate-[pulse_3s_ease-in-out_infinite]">see more</p>
+                        <a class="hero__see-more-button backdrop-blur-sm animate-[bounce_5s_ease-in-out_infinite]">
                             <svg class="svg hero__see-more-button-wrapper" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="arrow-circle-down-svgrepo-com 1" clip-path="url(#clip0_393_415)">
-                                    <path id="Vector"
+                                    <path class="stroke-Gray-500" id="Vector"
                                         d="M20 39.4595C30.7471 39.4595 39.4595 30.7471 39.4595 20C39.4595 9.25282 30.7471 0.540527 20 0.540527C9.25282 0.540527 0.540527 9.25282 0.540527 20C0.540527 30.7471 9.25282 39.4595 20 39.4595Z"
-                                        stroke="#667085" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path id="Vector_2" d="M13.1306 17.5481L19.9999 24.3978L26.8691 17.5481" stroke="#667085" stroke-width="2"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path class="stroke-Gray-500" id="Vector_2" d="M13.1306 17.5481L19.9999 24.3978L26.8691 17.5481" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </g>
                                 <defs>
@@ -83,8 +110,12 @@
                 </div>
 
                 <!-- Static background -->
-                <img src="png/Capstone-Project__Hero-Background--Static_v2_04182024.png" alt="" class="hero__background absolute h-full bottom-0 mix-blend-darken">
+                <div class="relative w-full bottom-0">
+                    <img src="png/Capstone-Project__Hero-Background--Static_v2_04182024.png" alt="" class="hero__background absolute bottom-0 mix-blend-darken" height="707.5" width="474">
+                </div>
             </section>
+            <!-- Features and benefits -->
+            <section class="temp h-[100vh]"></section>
         </main>
     </body>
     <script type="module" src="/main.js"></script>
