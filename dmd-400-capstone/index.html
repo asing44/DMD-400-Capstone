@@ -11,12 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <script type="module" src="/main.js"></script>
-    <body id="body" class="relative p-20 bg-Electric_blue-800 text-Gray-400">
+    <body id="body" class="relative p-20 bg-Electric_blue-700 text-Gray-400">
         <div class="alert invisible md:visible flex fixed h-full w-full justify-center items-center right-0 top-0 bg-Gray-800 z-50">
             <p class="alert__copy text-4xl text-Gray-50 text-center font-bold">This display size is still under production<span class="animate-[pulse_2s_ease-in-out_infinite]">.</span><span class="animate-[pulse_2s_ease-in-out_infinite_0.2s]">.</span><span class="animate-[pulse_2s_ease-in-out_infinite_0.4s]">.</span></p>
         </div>
-        <!--  -->
-        <main class="main relative bg-Gray-50 bg-clip-content rounded-3xl overflow-hidden">
+        <main class="main relative rounded-t-3xl overflow-hidden">
             
             <nav class="nav absolute w-full flex justify-between items-baseline p-40 backdrop-blur-sm z-50">
                 <!-- Nav left -->
@@ -35,9 +34,9 @@
                 </div>
             </nav>
             <!-- Dup nav for spacing -->
-            <div class="nav-spacing w-full flex justify-between items-baseline p-40 invisible">
+            <div class="nav-spacing w-full flex justify-between items-baseline p-40 bg-Gray-25">
                 <!-- Nav left -->
-                <div class="__C nav__logo-container flex items-baseline gap-x-20">
+                <div class="__C nav__logo-container flex items-baseline gap-x-20 invisible">
                     <div class="__C nav__logo">
                         <img src="svg/Capstone__Logo--alt.svg" alt="" class="img">
                     </div>
@@ -48,20 +47,20 @@
                 </div>
                 <!--  -->
                 <!-- Nav right -->
-                <div class="__C nav__button-container flex bg-Gray-25 backdrop-blur-sm">
+                <div class="__C nav__button-container flex bg-Gray-25 backdrop-blur-sm invisible">
                     <img src="svg/Capstone-Project__Menu-Button--Mobile_v1_04182024.svg" alt="Menu button" class="img h-full"
                         height="48" width="48">
                 </div>
             </div>
             <!-- Hero -->
-            <section class="section hero relative w-full flex flex-col mt-40 rounded-t-3xl bg-White overflow-hidden">
+            <section class="section hero relative w-full flex flex-col pt-40 rounded-b-3xl bg-Gray-25 overflow-hidden">
 
                 <!-- Main -->
                 <div class="hero__main flex flex-col gap-y-90 pb-60 text-Gray-500 overflow-hidden">
 
                     <!-- Bottom overlay -->
-                    <div class="__W hero__overlay-wrapper absolute h-100 w-full bottom-0 left-0 bg-gradient-to-t from-Gray-500 opacity-60">
-                    </div>
+                    <!-- <div class="__W hero__overlay-wrapper absolute h-100 w-full bottom-0 left-0 bg-gradient-to-b from-transparent to-Gray-700 opacity-60">
+                    </div> -->
 
                     <!-- Copy -->
                     <div class="hero__copy inline-flex relative place-self-center flex-col gap-y-60 px-60 drop-shadow">
@@ -79,12 +78,12 @@
                                 <p class="hero-tagline__top display_sm text-Gray-500 whitespace-nowrap">cultivate your nice,</p>
                                 <p class="hero-tagline__bottom border-leaf__tr--sm bg-Brand-300 px-20 py-10 display_sm text-Gray-25 italic">smartly</p>
                             </div>
-                            <div class="absolute top-[-14px] left-[11px] scale-150 z-10">
-                            <img src="svg/Hero__Background-Top.svg" alt="">
-                        </div>
-                        </div>
 
-                        <!-- Green background -->
+                            <!-- Green background -->
+                            <div class="absolute top-[-14px] left-[11px] scale-150 z-10 opacity-60">
+                                <img src="svg/Hero__Background-Top.svg" alt="">
+                            </div>
+                        </div>
                         
                     </div>
 
@@ -112,20 +111,13 @@
 
                 <!-- Static background -->
                 <div class="relative w-full bottom-0">
-                    <img src="png/Capstone-Project__Hero-Background--Static_v2_04182024.png" alt="" class="hero__background absolute bottom-0 mix-blend-darken" height="707.5" width="474">
+                    <img src="png/Capstone-Project__Hero-Background--Static_v2_04182024.png" alt="" class="hero__background absolute bottom-0 mix-blend-darken opacity-50" height="707.5" width="474">
                 </div>
             </section>
-            <!-- Features and benefits -->
-            <section class="section features relative h-[100vh]">
 
-                <!-- Transition overlay -->
-                <div class="__W features__overlay-wrapper h-60 w-full top-0 left-0 bg-gradient-to-b from-Gray-500 to-Gray-500 opacity-60 backdrop-blur-lg">
-                </div>
-                <div class="__W features__overlay-wrapper h-90 w-full top-0 left-0 bg-gradient-to-b from-Gray-500 opacity-60">
-                </div>
+            <!-- Features and benefits -->
+            <section class="section features relative h-[100vh] bg-Electric_blue-700">
                 
-                <p class="tag features__tag">features</p>
-                <h2 class="h2 features_h2 display_md">What is Smart Garden?</h2>
             </section>
         </main>
     </body>
