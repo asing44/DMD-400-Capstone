@@ -1,0 +1,76 @@
+<svg id="menu-button" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #144b66;
+            }
+
+            .cls-1,
+            .cls-2 {
+                stroke-width: 0px;
+            }
+
+            .cls-3 {
+                stroke: #98a2b3;
+            }
+
+            .cls-3,
+            .cls-2,
+            .cls-4,
+            .cls-5,
+            .cls-6 {
+                fill: none;
+            }
+
+            .cls-3,
+            .cls-4,
+            .cls-5 {
+                stroke-linecap: round;
+            }
+
+            .cls-3,
+            .cls-4,
+            .cls-5,
+            .cls-6 {
+                stroke-miterlimit: 10;
+            }
+
+            .cls-7 {
+                clip-path: url(#clippath);
+            }
+
+            .cls-4 {
+                stroke: #667085;
+            }
+
+            .cls-5,
+            .cls-6 {
+                stroke: #f9fafb;
+            }
+        </style>
+        <clipPath id="clippath">
+            <rect class="cls-2" x="0" y="0" width="48" height="48" rx="24" ry="24" />
+        </clipPath>
+    </defs>
+    <g id="Menu-Button--idle">
+        <g id="v4">
+            <g id="v3">
+                <g class="cls-7">
+                    <rect class="cls-1" x="0" y="0" width="48" height="48" rx="24" ry="24" />
+                    <path class="cls-4" d="M6,16h4c2.21,0,4-1.79,4-4" />
+                    <path class="cls-4" d="M6,32h4c2.21,0,4-1.79,4-4" />
+                    <path class="cls-4" d="M6,38h4c2.21,0,4-1.79,4-4v-6" />
+                    <path class="cls-3" d="M14,12V0" />
+                    <path class="cls-3" d="M18,16c-2.21,0-4-1.79-4-4" />
+                    <path class="cls-3" d="M14,12v8c0,2.21,1.79,4,4,4" />
+                    <path class="cls-3" d="M14,20v8c0,2.21,1.79,4,4,4" />
+                    <path class="cls-5" d="M30,16h-12" />
+                    <path class="cls-5" d="M18,24h12" />
+                    <path class="cls-5" d="M18,32h12" />
+                    <rect class="cls-6" x="0" y="0" width="48" height="48" rx="24" ry="24" />
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

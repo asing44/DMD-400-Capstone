@@ -1,6 +1,4 @@
 import './output.css'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -25,6 +23,71 @@ gsap.registerEffect({
     parent: '.wrap',
   }
 });
+
+/* 
+Function that will animate text up in a "growth" effect
+*/
+
+function animateTextElement(elementSelector, triggerSelector, options = {}) {
+  document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve the element based on the selector provided
+    let element = document.querySelector(elementSelector);
+
+    if (!element) {
+      console.error("Element not found: ", elementSelector);
+      return;
+    }
+
+    const textContent = element.textContent.trim();
+    const characters = textContent.split("");
+    const textLength = characters.length;
+
+    element.textContent = ""; // Clear the original content
+
+    // Wrap each character in a span and append to the original element
+    characters.forEach((char) => {
+      const span = document.createElement("span");
+      span.textContent = char === " " ? "\u00A0" : char; // Preserve spaces
+      span.classList.add("inline-block"); // Ensure spans do not wrap
+      element.appendChild(span);
+    });
+
+    // Default settings
+    const defaults = {
+      stagger: 0.05,
+      delay: 0,
+    };
+
+    // Merge default settings with user-provided options
+    const settings = { ...defaults, ...options };
+
+    // Calculate dynamic duration based on the text length
+    const dynamicDuration = textLength * 0.005 + 0.5; // Smaller multiplier and a base value
+
+    // Create a GSAP timeline with ScrollTrigger
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: triggerSelector,
+          start: "top 75%",
+        },
+      })
+      .fromTo(
+        element.querySelectorAll("span"),
+        {
+          yPercent: 100,
+        },
+        {
+          delay: settings.delay,
+          stagger: settings.stagger,
+          yPercent: 0,
+          ease: "power2.inOut",
+          duration: dynamicDuration,
+        }
+      );
+  });
+}
+
 
 // ======================
 // Section: Initialization
@@ -97,7 +160,6 @@ function screenMoving() {
   return scroll
 }
 
-
 // ======================
 // Section: Navigation
 // ======================
@@ -150,3 +212,13 @@ window.seeMore = function () {
     ease: "power2.inOut"
   });
 };
+
+// ======================
+// Section: Features
+// ======================
+
+animateTextElement(".features__h2", ".features");
+
+animateTextElement(".features__tag", ".features", {
+  delay: 0.25
+});

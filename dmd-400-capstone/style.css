@@ -11,6 +11,12 @@
         min-height: 100dvh;
         font-kerning: auto;
     }
+
+    .animated-el {
+        position: relative;
+        display: inline-block !important;
+        transform: inherit !important;
+    }
 }
 
 /* ====================== */

@@ -239,6 +239,9 @@ export const plugins = [
         fontSize: theme("fontSize[xs]"),
         leading: theme("leading[0.5rem]"),
       },
+      "._animate": {
+        translate: theme("spacing['0px']")
+      }
     });
   }),
 ];
