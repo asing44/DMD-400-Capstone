@@ -20,26 +20,57 @@
 }
 
 /* ====================== */
-/* Section: Reusable Styles */
+/* Section: Borders */
 /* ====================== */
 
 .border-leaf__tr {
     border-top-right-radius: 1.5rem;
-    border-bottom-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 1.5rem;
-    border-top-left-radius: 0.25rem;
+    border-top-left-radius: 0.5rem;
 }
 
 .border-leaf__tr--sm {
-    border-top-right-radius: 0.125rem;
+    border-top-right-radius: 4px;
     border-bottom-right-radius: 0.75rem;
-    border-bottom-left-radius: 0.125rem;
+    border-bottom-left-radius: 4px;
     border-top-left-radius: 0.75rem;
 }
 
 .border-leaf__tl {
-    border-top-right-radius: 0.25rem;
+    border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 1.5rem;
-    border-bottom-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.5rem;
     border-top-left-radius: 1.5rem;
 }
+
+/* ====================== */
+/* Section: Card Backgrounds */
+/* ====================== */
+
+.background__card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #FBFBFC;
+        border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 1.5rem;
+    opacity: 90%;
+    backdrop-filter: blur(4px);
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    z-index: -10;
+}
+
+/* ====================== */
+/* Section: Animation Tags */
+/* ====================== */
+
+.anim__parallex--up {}
+
+.anim__parallex--down {}
+
+.anim__button--2 {}

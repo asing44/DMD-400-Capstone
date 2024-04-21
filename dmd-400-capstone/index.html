@@ -16,6 +16,7 @@
         </div>
         <main class="main relative rounded-t-3xl overflow-hidden">
             
+            <!-- Nav -->
             <nav class="nav absolute w-full flex justify-between items-baseline p-40 rounded-3xl backdrop-blur-sm z-50">
                 <!-- Nav left -->
                 <a class="__W nav__logo-container flex items-baseline gap-x-20 cursor-pointer" href="index.html">
@@ -107,6 +108,7 @@
                     </svg>
                 </div>
             </nav>
+
             <!-- Dup nav for spacing -->
             <div class="nav-spacing w-full flex justify-between items-baseline p-40 bg-Gray-25">
                 <!-- Nav left -->
@@ -126,23 +128,26 @@
                         height="48" width="48">
                 </div>
             </div>
+
             <!-- Hero -->
-            <section class="section hero relative w-full flex flex-col pt-60 rounded-b-3xl bg-Gray-25 overflow-hidden">
+            <section class="section hero relative w-full flex flex-col pt-40 rounded-b-3xl bg-Gray-25 overflow-hidden">
 
                 <!-- Main -->
                 <div class="hero__main flex relative flex-col gap-y-100 text-Gray-500 overflow-hidden">
 
                     <!-- Copy -->
-                    <div class="hero__copy inline-flex relative place-self-center flex-col gap-y-40 px-40 z-20">
+                    <div class="hero__copy inline-flex relative place-self-center flex-col gap-y-70 px-40 z-20">
 
                             <!-- Top -->
-                            <div class="flex">
-                                <h1 class="h1 hero__h1 display_md font-medium text-center">A modular gardening system</h1>
+                            <div class="flex relative anim__parallex--up">
+                                <h1 class="h1 hero__h1 display_lg z-10">A modular gardening system</h1>
+                                <div class="container absolute h-full top-0 left-0 bg-Gray-50 border-leaf__tl shadow-lg backdrop-blur-sm opacity-50 z-0"></div>
                             </div>
 
                             <!-- Bottom -->
-                            <div class="relative flex place-content-end">
-                                <p class="hero-tagline__top display_sm text-Gray-400 text-right font-light">cultivate your nice, <span class="text-Brand-300 italic">smartly</span></p>
+                            <div class="relative py-30 px-20 anim__parallex--up">
+                                <p class="hero-tagline__top display_sm text-Gray-500 text-center font-light">cultivate your nice, <span class="text-Brand-300 italic z-10">smartly</span></p>
+                                <div class="container absolute h-full top-0 left-0 bg-Gray-50 border-leaf__tl shadow-lg backdrop-blur-sm opacity-50 z-0"></div>
                             </div>
                     </div>
 
@@ -166,7 +171,6 @@
                             </svg>
                         </div>
                     </button>
-                    </div>
                 </div>
 
                 <!-- Static backgrounds -->
@@ -179,7 +183,7 @@
             </section>
 
             <!-- Features and benefits -->
-            <section class="section features flex flex-col gap-y-60 relative h-[100vh] bg-Electric_blue-700">
+            <section class="section features flex relative flex-col gap-y-60 pb-70  bg-Electric_blue-700">
 
                 <!-- Header -->
                 <header class="flex flex-col gap-y-20">
@@ -191,24 +195,53 @@
                         <p class="tag features__tag body_md text-Gray-300 text-right">What is SmartGarden?</p>
                     </div>
                 </header>
-                <div class="__C features-container flex border">
-                    <div class="__C features__cards">
+                <div class="__C features-container flex gap-x-50">
+
+                    <!-- Cards -->
+                    <div class="__C features__cards anim__parallex--up">
 
                         <!-- Card -->
-                        <div class="__C features--card aspect-1/2 pr-30 pl-20 py-40 rounded-3xl bg-Gray-50">
+                        <div class="__C features--card relative flex flex-col gap-y-50 aspect-auto pr-30 pl-20 py-40 rounded-3xl overflow-hidden z-10">
+
+                            <!-- Header -->
                             <div class="__C features--card__header flex flex-col gap-y-20">
-                                <h3 class="h3 features--card__h3 body_lg -700 font-medium">Automated Watering</h3>
+                                <h3 class="h3 features--card__h3 body_lg text-Electric_blue-700 font-medium">Automated Watering</h3>
                                 <p class="features--card__copy text-Gray-500">Our system adjusts watering based on plant type and environmental conditions.</p>
                             </div>
-                            <div class="__C features--card__main flex">
-                                <div class="__W features--card__animation-wrapper w-[180px] aspect-square">
-                                    <img src="/svg/Sections/Features/Features-Icon__Automatic-Watering--v1.svg" alt="">
+
+                            <!-- Main -->
+                            <div class="__C features-card__main flex gap-x-70">
+
+                                <!-- Animation and button -->
+                                <div class="__W features--card__animation-wrapper relative flex flex-col h-full min-w-90 flex-auto gap-y-50">
+                                    <img class="aspect-square" src="svg/Sections/Features/Features-Icon__Automatic-Watering--v3.svg" alt="">
                                 </div>
+
+                                <!-- Text -->
+                                <p class="text-Purple-400 font-bold body_lg text-right tracking-[8px] opacity-10 rotate-180" style="writing-mode: vertical-rl;">FEATURE</p>
                             </div>
+
+                            <!-- Button -->
+                            <a href="" class="group __W  button anim__button--2 features-button-wrapper flex relative justify-between mx-50 px-40 py-30 border border-leaf__tr--sm border-Brand-400 overflow-y-hidden anim__ripple-text-container">
+                                <p class="features-button__text button-2__text relative text-Gray-500 z-10">more details</p>
+                                <div class="__W features-button__arrow-wrapper button-2__arrow relative h-full z-10">
+                                    <svg class="symbols__arrow-right stroke-Gray-500" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="button-2__hover absolute h-full w-full top-1/2 left-0 bg-Brand-400 z-0"></div>
+                            </a>
+
+                            <!-- Background -->
+                            <div class="background__card"></div>
+
                         </div>
 
                     </div>
-                    <div class="__C features__progress w-60"></div>
+
+                    <!-- Progress bar -->
+                    <div class="__C features__progress flex w-60 flex-shrink-0 border"></div>
                 </div>
             </section>
         </main>

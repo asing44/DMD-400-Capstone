@@ -24,71 +24,6 @@ gsap.registerEffect({
   }
 });
 
-/* 
-Function that will animate text up in a "growth" effect
-*/
-
-function animateTextElement(elementSelector, triggerSelector, options = {}) {
-  document.addEventListener("DOMContentLoaded", function () {
-    // Retrieve the element based on the selector provided
-    let element = document.querySelector(elementSelector);
-
-    if (!element) {
-      console.error("Element not found: ", elementSelector);
-      return;
-    }
-
-    const textContent = element.textContent.trim();
-    const characters = textContent.split("");
-    const textLength = characters.length;
-
-    element.textContent = ""; // Clear the original content
-
-    // Wrap each character in a span and append to the original element
-    characters.forEach((char) => {
-      const span = document.createElement("span");
-      span.textContent = char === " " ? "\u00A0" : char; // Preserve spaces
-      span.classList.add("inline-block"); // Ensure spans do not wrap
-      element.appendChild(span);
-    });
-
-    // Default settings
-    const defaults = {
-      stagger: 0.05,
-      delay: 0,
-    };
-
-    // Merge default settings with user-provided options
-    const settings = { ...defaults, ...options };
-
-    // Calculate dynamic duration based on the text length
-    const dynamicDuration = textLength * 0.005 + 0.5; // Smaller multiplier and a base value
-
-    // Create a GSAP timeline with ScrollTrigger
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: triggerSelector,
-          start: "top 75%",
-        },
-      })
-      .fromTo(
-        element.querySelectorAll("span"),
-        {
-          yPercent: 100,
-        },
-        {
-          delay: settings.delay,
-          stagger: settings.stagger,
-          yPercent: 0,
-          ease: "power2.inOut",
-          duration: dynamicDuration,
-        }
-      );
-  });
-}
-
-
 // ======================
 // Section: Initialization
 // ======================
@@ -161,6 +96,169 @@ function screenMoving() {
 }
 
 // ======================
+// Section: Button 2 Animations
+// ======================
+
+let button2Anims = gsap.utils.toArray(".anim__button-2");
+
+button2Anims.forEach(animation => {
+
+});
+
+// ======================
+// Section: Move Up onEnter Animations
+// ======================
+
+// Up
+let parllexUpAnims = gsap.utils.toArray(".anim__parallex--up");
+
+// ? Maybe check for child elements with same animations and create a stagger
+
+parllexUpAnims.forEach((el) => {
+  gsap.fromTo(el, {
+    yPercent: 15,
+    opacity: 0
+  }, {
+    duration: 1,
+    yPercent: 0,
+    opacity: 1,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 75%"
+    }
+  })
+});
+
+// ======================
+// Section: Text Ripple Animations
+// ======================
+
+/* 
+Function that will animate text up in a "growth" effect.
+
+THe function is also manually called. There is an auto below that uses class names.
+*/
+
+function rippleText_anim(elementSelector, triggerSelector, options = {}) {
+  document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve the element based on the selector provided
+    let element = document.querySelector(elementSelector);
+
+    if (!element) {
+      console.error("Element not found: ", elementSelector);
+      return;
+    }
+
+    const textContent = element.textContent.trim();
+    const characters = textContent.split("");
+    const textLength = characters.length;
+
+    element.textContent = ""; // Clear the original content
+
+    // Wrap each character in a span and append to the original element
+    characters.forEach((char) => {
+      const span = document.createElement("span");
+      span.textContent = char === " " ? "\u00A0" : char; // Preserve spaces
+      span.classList.add("inline-block"); // Ensure spans do not wrap
+      element.appendChild(span);
+    });
+
+    // Default settings
+    const defaults = {
+      stagger: 0.05,
+      delay: 0,
+    };
+
+    // Merge default settings with user-provided options
+    const settings = { ...defaults, ...options };
+
+    // Calculate dynamic duration based on the text length
+    const dynamicDuration = textLength * 0.005 + 0.5; // Smaller multiplier and a base value
+
+    // Create a GSAP timeline with ScrollTrigger
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: triggerSelector,
+          start: "top 75%",
+        },
+      })
+      .fromTo(
+        element.querySelectorAll("span"),
+        {
+          yPercent: 100,
+        },
+        {
+          delay: settings.delay,
+          stagger: settings.stagger,
+          yPercent: 0,
+          ease: "power2.inOut",
+          duration: dynamicDuration,
+        }
+      );
+  });
+}
+
+function rippleText_anim__auto(element, triggerSelector, options = {}) {
+  document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve the element based on the selector provided
+
+    if (!element) {
+      console.error("Element not found: ", elementSelector);
+      return;
+    }
+
+    const textContent = element.textContent.trim();
+    const characters = textContent.split("");
+    const textLength = characters.length;
+
+    element.textContent = ""; // Clear the original content
+
+    // Wrap each character in a span and append to the original element
+    characters.forEach((char) => {
+      const span = document.createElement("span");
+      span.textContent = char === " " ? "\u00A0" : char; // Preserve spaces
+      span.classList.add("inline-block"); // Ensure spans do not wrap
+      element.appendChild(span);
+    });
+
+    // Default settings
+    const defaults = {
+      stagger: 0.05,
+      delay: 0,
+    };
+
+    // Merge default settings with user-provided options
+    const settings = { ...defaults, ...options };
+
+    // Calculate dynamic duration based on the text length
+    const dynamicDuration = textLength * 0.005 + 0.5; // Smaller multiplier and a base value
+
+    // Create a GSAP timeline with ScrollTrigger
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: triggerSelector,
+        },
+      })
+      .fromTo(
+        element.querySelectorAll("span"),
+        {
+          yPercent: 100,
+        },
+        {
+          delay: settings.delay,
+          stagger: settings.stagger,
+          yPercent: 0,
+          ease: "power2.inOut",
+          duration: dynamicDuration,
+        }
+      );
+  });
+}
+
+// ======================
 // Section: Navigation
 // ======================
 
@@ -199,6 +297,28 @@ gsap.to(nav, {
   }
 })
 
+
+
+// ======================
+// Section: Ripple Text
+// ======================
+
+// let rippleTextAnims = gsap.utils.toArray("anim__ripple-text");
+
+// rippleTextAnims.forEach(anim => {
+
+// })
+
+let rippleTextAnimContainer = gsap.utils.toArray(".anim__ripple-text-container");
+
+rippleTextAnimContainer.forEach(container => {
+  const animContainer = gsap.utils.selector(container);
+  const el = animContainer(".anim__ripple-text")[0]
+console.log(el);
+
+rippleText_anim__auto(el, container)
+});
+
 // ======================
 // Section: Hero
 // ======================
@@ -217,8 +337,8 @@ window.seeMore = function () {
 // Section: Features
 // ======================
 
-animateTextElement(".features__h2", ".features");
+rippleText_anim(".features__h2", ".features");
 
-animateTextElement(".features__tag", ".features", {
-  delay: 0.25
+rippleText_anim(".features__tag", ".features", {
+  delay: 0.25,
 });
