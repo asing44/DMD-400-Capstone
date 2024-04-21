@@ -401,3 +401,24 @@ rippleText_anim(".features__h2", ".features");
 rippleText_anim(".features__tag", ".features", {
   delay: 0.25,
 });
+
+// Animate progress bar
+const featureCardHeight = document.getElementsByClassName("features--card")[0].offsetHeight;
+
+let progress_tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".features__progress-wrapper",
+    pin: ".features__progress-container",
+    start: "top 25%",
+    end: `bottom 74%`,
+    scrub: 1,
+    anticipatePin: 0.1,
+    markers: true,
+  },
+});
+
+gsap.utils.toArray(".features__progress-circle").forEach((circle, index) => {
+  index == 0
+    ? progress_tl.add(gsap.to(circle, { scale: 3 }))
+    : progress_tl.add(gsap.to(circle, { scale: 3 }));
+});

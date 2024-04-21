@@ -976,6 +976,18 @@ html {
   height: 1rem;
 }
 
+.h-50 {
+  height: 1.5rem;
+}
+
+.h-30 {
+  height: 0.75rem;
+}
+
+.h-20 {
+  height: 0.5rem;
+}
+
 .max-h-\[44px\] {
   max-height: 44px;
 }
@@ -1002,6 +1014,18 @@ html {
 
 .w-40 {
   width: 1rem;
+}
+
+.w-50 {
+  width: 1.5rem;
+}
+
+.w-30 {
+  width: 0.75rem;
+}
+
+.w-20 {
+  width: 0.5rem;
 }
 
 .min-w-90 {
@@ -1058,6 +1082,12 @@ html {
 
 .rotate-180 {
   --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-\[3\] {
+  --tw-scale-x: 3;
+  --tw-scale-y: 3;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2293,6 +2323,11 @@ html {
 .py-40 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-50 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pb-60 {
