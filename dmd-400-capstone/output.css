@@ -2257,6 +2257,11 @@ html {
   padding-bottom: 1rem;
 }
 
+.px-60 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .pb-60 {
   padding-bottom: 2.5rem;
 }
@@ -3024,6 +3029,10 @@ html {
 }
 
 @media (min-width: 640px) {
+  .sm\:top-1\/2 {
+    top: 50%;
+  }
+
   .sm\:underline {
     text-decoration-line: underline;
   }

@@ -101,8 +101,38 @@ function screenMoving() {
 
 let button2Anims = gsap.utils.toArray(".anim__button-2");
 
-button2Anims.forEach(animation => {
+button2Anims.forEach(animationContainer => {
+  const container = gsap.utils.selector(animationContainer);
 
+  let tl = gsap
+    .timeline({
+      paused: true
+    })
+    .to(container(".button-2__hover"), {
+      yPercent: -100,
+    }, ("<"))
+    .to(
+    container(".button-2__text"),
+      {
+        color: "#FBFBFC",
+      },
+      "<"
+    )
+    .to(container(".button-2__arrow svg"), {
+      stroke: "#FBFBFC",
+    }, "<")
+    .to(animationContainer, {
+      paddingRight: "32px",
+      ease: "ease.inOut"
+    }, "<50%")
+
+  animationContainer.addEventListener("mouseenter", () => {
+    tl.play();
+  });
+
+  animationContainer.addEventListener("mouseleave", () => {
+    tl.reverse();
+  })
 });
 
 // ======================
@@ -112,7 +142,7 @@ button2Anims.forEach(animation => {
 // Up
 let parllexUpAnims = gsap.utils.toArray(".anim__parallex--up");
 
-// ? Maybe check for child elements with same animations and create a stagger
+// ? Maybe check for animated elements within the same section and create a stagger?
 
 parllexUpAnims.forEach((el) => {
   gsap.fromTo(el, {
@@ -131,7 +161,11 @@ parllexUpAnims.forEach((el) => {
 });
 
 // ======================
-// Section: Text Ripple Animations
+// Section: Button 2 Animations
+// ======================
+
+// ======================
+// Section: Ripple Text Animations
 // ======================
 
 /* 
@@ -205,7 +239,7 @@ function rippleText_anim__auto(element, triggerSelector, options = {}) {
     // Retrieve the element based on the selector provided
 
     if (!element) {
-      console.error("Element not found: ", elementSelector);
+      console.error("Element not found: ", element);
       return;
     }
 
@@ -258,6 +292,16 @@ function rippleText_anim__auto(element, triggerSelector, options = {}) {
   });
 }
 
+let rippleTextAnimContainer = gsap.utils.toArray(".anim__ripple-text-container");
+
+rippleTextAnimContainer.forEach(container => {
+  const animContainer = gsap.utils.selector(container);
+  const el = animContainer(".anim__ripple-text")[0]
+console.log(el);
+
+rippleText_anim__auto(el, container)
+});
+
 // ======================
 // Section: Navigation
 // ======================
@@ -295,28 +339,6 @@ gsap.to(nav, {
       scroll = currentScrollTop;
     },
   }
-})
-
-
-
-// ======================
-// Section: Ripple Text
-// ======================
-
-// let rippleTextAnims = gsap.utils.toArray("anim__ripple-text");
-
-// rippleTextAnims.forEach(anim => {
-
-// })
-
-let rippleTextAnimContainer = gsap.utils.toArray(".anim__ripple-text-container");
-
-rippleTextAnimContainer.forEach(container => {
-  const animContainer = gsap.utils.selector(container);
-  const el = animContainer(".anim__ripple-text")[0]
-console.log(el);
-
-rippleText_anim__auto(el, container)
 });
 
 // ======================
