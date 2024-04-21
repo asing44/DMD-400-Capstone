@@ -10,6 +10,9 @@
     html {
         min-height: 100dvh;
         font-kerning: auto;
+        overscroll-behavior: none;
+        scroll-behavior: auto;
+        touch-action: pan-x;
     }
 
     .animated-el {
@@ -65,12 +68,33 @@
     z-index: -10;
 }
 
+.background__card--no-fill {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 1.5rem;
+    opacity: 90%;
+    backdrop-filter: blur(4px);
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    z-index: -10;
+}
+
 /* ====================== */
 /* Section: Animation Tags */
 /* ====================== */
 
-.anim__parallex--up {}
+.anim__slide--up {}
 
-.anim__parallex--down {}
+.anim__slide--down {}
 
 .anim__button--2 {}
+
+.anim__move-delay {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #144b66;
+                stroke-width: 0px;
+            }
+
+            .cls-2 {
+                fill: none;
+                stroke: #f2f4f7;
+                stroke-linecap: round;
+                stroke-miterlimit: 10;
+            }
+        </style>
+    </defs>
+    <g id="Menu-Button--idle">
+        <g id="Static">
+            <path class="cls-1"
+                d="M12,0h32c2.21,0,4,1.79,4,4v28c0,8.83-7.17,16-16,16H4C1.79,48,0,46.21,0,44V12C0,5.38,5.38,0,12,0Z" />
+            <line class="cls-2" x1="12" y1="16" x2="36" y2="16" />
+            <line class="cls-2" x1="12" y1="24" x2="36" y2="24" />
+            <line class="cls-2" x1="36" y1="32" x2="12" y2="32" />
+        </g>
+    </g>
+</svg>

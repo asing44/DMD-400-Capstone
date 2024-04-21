@@ -17,7 +17,7 @@
         <main class="main relative rounded-t-3xl overflow-hidden">
             
             <!-- Nav -->
-            <nav class="nav absolute w-full flex justify-between items-baseline p-40 rounded-3xl backdrop-blur-sm z-50">
+            <nav class="nav absolute w-full flex justify-between items-baseline p-40 border border-Gray-50 rounded-3xl backdrop-blur-sm z-50">
                 <!-- Nav left -->
                 <a class="__W nav__logo-container flex items-baseline gap-x-20 cursor-pointer" href="index.html">
                     <div class="__C nav__logo">
@@ -29,80 +29,30 @@
                 </a>
                 <!--  -->
                 <!-- Nav right -->
-                <div class="__W nav__button-container flex h-full aspect-square backdrop-blur-sm cursor-pointer">
-                    <svg class="" id="menu-button" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                <div class="__W nav__button-container flex h-full max-h-[44px] aspect-square backdrop-blur-sm cursor-pointer">
+                    <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
                         <defs>
                             <style>
                                 .cls-1 {
                                     fill: #144b66;
-                                }
-                    
-                                .cls-1,
-                                .cls-2 {
                                     stroke-width: 0px;
                                 }
                     
-                                .cls-3 {
-                                    stroke: #98a2b3;
-                                }
-                    
-                                .cls-3,
-                                .cls-2,
-                                .cls-4,
-                                .cls-5,
-                                .cls-6 {
+                                .cls-2 {
                                     fill: none;
-                                }
-                    
-                                .cls-3,
-                                .cls-4,
-                                .cls-5 {
+                                    stroke: #f2f4f7;
                                     stroke-linecap: round;
-                                }
-                    
-                                .cls-3,
-                                .cls-4,
-                                .cls-5,
-                                .cls-6 {
                                     stroke-miterlimit: 10;
                                 }
-                    
-                                .cls-7 {
-                                    clip-path: url(#clippath);
-                                }
-                    
-                                .cls-4 {
-                                    stroke: #667085;
-                                }
-                    
-                                .cls-5,
-                                .cls-6 {
-                                    stroke: #f9fafb;
-                                }
                             </style>
-                            <clipPath id="clippath">
-                                <rect class="cls-2" x="0" y="0" width="48" height="48" rx="24" ry="24" />
-                            </clipPath>
                         </defs>
                         <g id="Menu-Button--idle">
-                            <g id="v4">
-                                <g id="v3">
-                                    <g class="cls-7">
-                                        <rect class="cls-1" x="0" y="0" width="48" height="48" rx="24" ry="24" />
-                                        <path class="cls-4" d="M6,16h4c2.21,0,4-1.79,4-4" />
-                                        <path class="cls-4" d="M6,32h4c2.21,0,4-1.79,4-4" />
-                                        <path class="cls-4" d="M6,38h4c2.21,0,4-1.79,4-4v-6" />
-                                        <path class="cls-3" d="M14,12V0" />
-                                        <path class="cls-3" d="M18,16c-2.21,0-4-1.79-4-4" />
-                                        <path class="cls-3" d="M14,12v8c0,2.21,1.79,4,4,4" />
-                                        <path class="cls-3" d="M14,20v8c0,2.21,1.79,4,4,4" />
-                                        <path class="cls-5" d="M30,16h-12" />
-                                        <path class="cls-5" d="M18,24h12" />
-                                        <path class="cls-5" d="M18,32h12" />
-                                        <rect class="cls-6" x="0" y="0" width="48" height="48" rx="24" ry="24" />
-                                    </g>
-                                </g>
+                            <g id="Static">
+                                <path class="cls-1"
+                                    d="M12,0h32c2.21,0,4,1.79,4,4v28c0,8.83-7.17,16-16,16H4C1.79,48,0,46.21,0,44V12C0,5.38,5.38,0,12,0Z" />
+                                <line class="cls-2" x1="12" y1="16" x2="36" y2="16" />
+                                <line class="cls-2" x1="12" y1="24" x2="36" y2="24" />
+                                <line class="cls-2" x1="36" y1="32" x2="12" y2="32" />
                             </g>
                         </g>
                     </svg>
@@ -133,44 +83,46 @@
             <section class="section hero relative w-full flex flex-col pt-40 rounded-b-3xl bg-Gray-25 overflow-hidden">
 
                 <!-- Main -->
-                <div class="hero__main flex relative flex-col gap-y-100 text-Gray-500 overflow-hidden">
+                <div class="hero__main flex relative flex-col gap-y-80 text-Gray-500 overflow-hidden">
 
                     <!-- Copy -->
-                    <div class="hero__copy inline-flex relative place-self-center flex-col gap-y-70 px-40 z-20">
+                    <div class="hero__copy inline-flex relative place-self-center flex-col gap-y-60 px-40 z-20">
 
                             <!-- Top -->
-                            <div class="flex relative anim__parallex--up">
+                            <div class="flex relative anim__slide--up anim__move-delay">
                                 <h1 class="h1 hero__h1 display_lg z-10">A modular gardening system</h1>
                                 <div class="container absolute h-full top-0 left-0 bg-Gray-50 border-leaf__tl shadow-lg backdrop-blur-sm opacity-50 z-0"></div>
                             </div>
 
                             <!-- Bottom -->
-                            <div class="relative py-30 px-20 anim__parallex--up">
+                            <div class="relative py-30 px-20 anim__slide--up anim__move-delay">
                                 <p class="hero-tagline__top display_sm text-Gray-500 text-center font-light">cultivate your nice, <span class="text-Brand-300 italic z-10">smartly</span></p>
                                 <div class="container absolute h-full top-0 left-0 bg-Gray-50 border-leaf__tl shadow-lg backdrop-blur-sm opacity-50 z-0"></div>
                             </div>
                     </div>
 
                     <!-- See more CTA -->
-                    <button class="__C hero__see-more-container flex relative flex-col place-items-center gap-y-50 pt-50 pb-60 rounded-t-3xl bg-Electric_blue-700 cursor-pointer z-40" onclick="seeMore()">
-                        <p class="hero__see-more-copy text-lg  text-Gray-50 font-thin tracking-widest backdrop-blur-sm animate-[pulse_3s_ease-in-out_infinite]">see more</p>
-                        <div class="hero__see-more-button backdrop-blur-sm animate-[bounce_5s_ease-in-out_infinite]">
-                            <svg class="svg hero__see-more-button-wrapper fill-Gray-50" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="arrow-circle-down-svgrepo-com 1" clip-path="url(#clip0_393_415)">
-                                    <path class="stroke-Gray-500" id="Vector"
-                                        d="M20 39.4595C30.7471 39.4595 39.4595 30.7471 39.4595 20C39.4595 9.25282 30.7471 0.540527 20 0.540527C9.25282 0.540527 0.540527 9.25282 0.540527 20C0.540527 30.7471 9.25282 39.4595 20 39.4595Z"
-                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path class="stroke-Gray-500" id="Vector_2" d="M13.1306 17.5481L19.9999 24.3978L26.8691 17.5481" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_393_415">
-                                        <rect width="40" height="40" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
-                    </button>
+                    <div class="hero__see-more-wrapper w-full">
+                        <button class="__C hero__see-more flex relative w-full flex-col place-items-center gap-y-50 pt-50 pb-60 rounded-t-3xl bg-Electric_blue-700 cursor-pointer z-40" onclick="seeMore()">
+                            <p class="hero__see-more-copy text-lg text-Gray-50 font-thin tracking-widest backdrop-blur-sm animate-[pulse_3s_ease-in-out_infinite]">see more</p>
+                            <div class="hero__see-more-button backdrop-blur-sm animate-[bounce_5s_ease-in-out_infinite]">
+                                <svg class="svg hero__see-more-button-wrapper fill-Gray-50" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="arrow-circle-down-svgrepo-com 1" clip-path="url(#clip0_393_415)">
+                                        <path class="stroke-Gray-500" id="Vector"
+                                            d="M20 39.4595C30.7471 39.4595 39.4595 30.7471 39.4595 20C39.4595 9.25282 30.7471 0.540527 20 0.540527C9.25282 0.540527 0.540527 9.25282 0.540527 20C0.540527 30.7471 9.25282 39.4595 20 39.4595Z"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path class="stroke-Gray-500" id="Vector_2" d="M13.1306 17.5481L19.9999 24.3978L26.8691 17.5481" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_393_415">
+                                            <rect width="40" height="40" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Static backgrounds -->
@@ -182,7 +134,7 @@
                 </div>
             </section>
 
-            <!-- Features and benefits -->
+            <!-- Features -->
             <section class="section features flex relative flex-col gap-y-60 pb-70  bg-Electric_blue-700">
 
                 <!-- Header -->
@@ -195,26 +147,28 @@
                         <p class="tag features__tag body_md text-Gray-300 text-right">What is SmartGarden?</p>
                     </div>
                 </header>
+
+                <!-- Main -->
                 <div class="__C features-container flex gap-x-50">
 
                     <!-- Cards -->
-                    <div class="__C features__cards anim__parallex--up">
+                    <div class="__C features__cards-container flex flex-col gap-y-70 relative flex-auto overflow-hidden">
 
-                        <!-- Card -->
-                        <div class="__C features--card relative flex flex-col gap-y-50 aspect-auto pr-30 pl-20 py-40 rounded-3xl overflow-hidden z-10">
-
+                        <!-- Card | Automated Watering -->
+                        <div class="__C features--card anim__slide--up anim__move-delay relative flex flex-col gap-y-50 aspect-auto pr-30 pl-20 py-40 rounded-3xl overflow-hidden z-10">
                             <!-- Header -->
                             <div class="__C features--card__header flex flex-col gap-y-20">
                                 <h3 class="h3 features--card__h3 body_lg text-Electric_blue-700 font-medium">Automated Watering</h3>
-                                <p class="features--card__copy text-Gray-500">Our system adjusts watering based on plant type and environmental conditions.</p>
+                                <p class="features--card__copy text-Gray-500 pr-5">Our system adjusts watering based on plant type and environmental conditions.</p>
                             </div>
 
                             <!-- Main -->
                             <div class="__C features-card__main flex gap-x-70">
 
                                 <!-- Animation and button -->
-                                <div class="__W features--card__animation-wrapper relative flex flex-col h-full min-w-90 flex-auto gap-y-50">
+                                <div class="__W features--card__animation-wrapper relative flex flex-col h-full min-w-90 flex-auto gap-y-50 py-30 px-20 z-10">
                                     <img class="aspect-square" src="svg/Sections/Features/Features-Icon__Automatic-Watering--v4.svg" alt="">
+                                    <div class="background__card--no-fill bg-Gray-200"></div>
                                 </div>
 
                                 <!-- Text -->
@@ -237,13 +191,140 @@
                             <div class="background__card"></div>
 
                         </div>
+                        
+                        <!-- Card | Modular Layout -->
+                        <div class="__C features--card anim__slide--up anim__move-delay relative flex flex-col gap-y-50 aspect-auto pr-30 pl-20 py-40 rounded-3xl overflow-hidden z-10">
+                        
+                            <!-- Header -->
+                            <div class="__C features--card__header flex flex-col gap-y-20">
+                                <h3 class="h3 features--card__h3 body_lg text-Electric_blue-700 font-medium">Modular Layout</h3>
+                                <p class="features--card__copy text-Gray-500 pr-5">Customize your garden layout to fit any space, indoors or out. Easily expand as your garden grows.</p>
+                            </div>
+                        
+                            <!-- Main -->
+                            <div class="__C features-card__main flex gap-x-70">
+                        
+                                <!-- Animation and button -->
+                                <div class="__W features--card__animation-wrapper relative flex flex-col h-full min-w-90 flex-auto gap-y-50 py-30 px-20 z-10">
+                                    <img class="aspect-square" src="svg/Sections/Features/Features-Icon__Automatic-Watering--v4.svg" alt="">
+                                    <div class="background__card--no-fill bg-Gray-200"></div>
+                                </div>
+                        
+                                <!-- Text -->
+                                <p class="text-Purple-400 font-bold body_lg text-right tracking-[8px] opacity-10 rotate-180" style="writing-mode: vertical-rl;">FEATURE</p>
+                            </div>
+                        
+                            <!-- Button -->
+                            <a href="" class="group __W  button anim__button-2 features-button-wrapper flex relative justify-between mx-50 px-40 py-30 border border-leaf__tr--sm border-Brand-400 overflow-y-hidden anim__ripple-text-container">
+                                <p class="features-button__text button-2__text relative text-Gray-500 z-10">more details</p>
+                                <div class="__W features-button__arrow-wrapper button-2__arrow relative h-full z-10">
+                                    <svg class="symbols__arrow-right stroke-Gray-500" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="button-2__hover absolute h-full w-full top-full left-0 bg-Brand-400 z-0"></div>
+                            </a>
+                        
+                            <!-- Background -->
+                            <div class="background__card"></div>
+                        
+                        </div>
+
+                        <!-- Card | Smart Lighting -->
+                        <div class="__C features--card anim__slide--up anim__move-delay relative flex flex-col gap-y-50 aspect-auto pr-30 pl-20 py-40 rounded-3xl overflow-hidden z-10">
+                        
+                            <!-- Header -->
+                            <div class="__C features--card__header flex flex-col gap-y-20">
+                                <h3 class="h3 features--card__h3 body_lg text-Electric_blue-700 font-medium">Smart Lighting</h3>
+                                <p class="features--card__copy text-Gray-500 pr-5">Integrated LED lights mimic natural sunlight, promoting growth year-round.</p>
+                            </div>
+                        
+                            <!-- Main -->
+                            <div class="__C features-card__main flex gap-x-70">
+                        
+                                <!-- Animation and button -->
+                                <div class="__W features--card__animation-wrapper relative flex flex-col h-full min-w-90 flex-auto gap-y-50 py-30 px-20 z-10">
+                                    <img class="aspect-square" src="svg/Sections/Features/Features-Icon__Automatic-Watering--v4.svg" alt="">
+                                    <div class="background__card--no-fill bg-Gray-200"></div>
+                                </div>
+                        
+                                <!-- Text -->
+                                <p class="text-Purple-400 font-bold body_lg text-right tracking-[8px] opacity-10 rotate-180" style="writing-mode: vertical-rl;">FEATURE</p>
+                            </div>
+                        
+                            <!-- Button -->
+                            <a href="" class="group __W  button anim__button-2 features-button-wrapper flex relative justify-between mx-50 px-40 py-30 border border-leaf__tr--sm border-Brand-400 overflow-y-hidden anim__ripple-text-container">
+                                <p class="features-button__text button-2__text relative text-Gray-500 z-10">more details</p>
+                                <div class="__W features-button__arrow-wrapper button-2__arrow relative h-full z-10">
+                                    <svg class="symbols__arrow-right stroke-Gray-500" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="button-2__hover absolute h-full w-full top-full left-0 bg-Brand-400 z-0"></div>
+                            </a>
+                        
+                            <!-- Background -->
+                            <div class="background__card"></div>
+                        
+                        </div>
+
+                        <!-- Card | Mobile App Control -->
+                        <div class="__C features--card anim__slide--up anim__move-delay relative flex flex-col gap-y-50 aspect-auto pr-30 pl-20 py-40 rounded-3xl overflow-hidden z-10">
+                        
+                            <!-- Header -->
+                            <div class="__C features--card__header flex flex-col gap-y-20">
+                                <h3 class="h3 features--card__h3 body_lg text-Electric_blue-700 font-medium">App Control</h3>
+                                <p class="features--card__copy text-Gray-500 pr-5">Monitor and control your garden from anywhere with our intuitive app.</p>
+                            </div>
+                        
+                            <!-- Main -->
+                            <div class="__C features-card__main flex gap-x-70">
+                        
+                                <!-- Animation and button -->
+                                <div class="__W features--card__animation-wrapper relative flex flex-col h-full min-w-90 flex-auto gap-y-50 py-30 px-20 z-10">
+                                    <img class="aspect-square" src="svg/Sections/Features/Features-Icon__Automatic-Watering--v4.svg" alt="">
+                                    <div class="background__card--no-fill bg-Gray-200"></div>
+                                </div>
+                        
+                                <!-- Text -->
+                                <p class="text-Purple-400 font-bold body_lg text-right tracking-[8px] opacity-10 rotate-180" style="writing-mode: vertical-rl;">FEATURE</p>
+                            </div>
+                        
+                            <!-- Button -->
+                            <a href="" class="group __W  button anim__button-2 features-button-wrapper flex relative justify-between mx-50 px-40 py-30 border border-leaf__tr--sm border-Brand-400 overflow-y-hidden anim__ripple-text-container">
+                                <p class="features-button__text button-2__text relative text-Gray-500 z-10">more details</p>
+                                <div class="__W features-button__arrow-wrapper button-2__arrow relative h-full z-10">
+                                    <svg class="symbols__arrow-right stroke-Gray-500" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="button-2__hover absolute h-full w-full top-full left-0 bg-Brand-400 z-0"></div>
+                            </a>
+                        
+                            <!-- Background -->
+                            <div class="background__card"></div>
+                        
+                        </div>
 
                     </div>
 
                     <!-- Progress bar -->
-                    <div class="__C features__progress flex w-60 flex-shrink-0 border"></div>
+                    <div class="__W features__progress-wrapper flex w-60 flex-col items-center flex-shrink-0 pt-60 border">
+                        <div class="__C features__progress-container flex flex-col items center">
+                            <div class="features__progress-circle--active"></div>
+                            <div class="features__progress-circle"></div>
+                            <div class="features__progress-circle"></div>
+                            <div class="features__progress-circle"></div>
+                        </div>
+                    </div>
                 </div>
             </section>
+
+            <!-- Get Started -->
+            <section class="h-[100dvh] rounded-3xl bg-Gray-25"></section>
         </main>
     </body>
         <script type="module" src="/main.js"></script>

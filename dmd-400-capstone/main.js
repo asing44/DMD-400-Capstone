@@ -99,6 +99,7 @@ function screenMoving() {
 // Section: Button 2 Animations
 // ======================
 
+// Button 2 hover animation
 let button2Anims = gsap.utils.toArray(".anim__button-2");
 
 button2Anims.forEach(animationContainer => {
@@ -106,6 +107,7 @@ button2Anims.forEach(animationContainer => {
 
   let tl = gsap
     .timeline({
+      duration: 1,
       paused: true
     })
     .to(container(".button-2__hover"), {
@@ -136,33 +138,67 @@ button2Anims.forEach(animationContainer => {
 });
 
 // ======================
-// Section: Move Up onEnter Animations
+// Section: Slide Up onEnter Animations
 // ======================
 
 // Up
-let parllexUpAnims = gsap.utils.toArray(".anim__parallex--up");
+let slideUpAnims = gsap.utils.toArray(".anim__slide--up");
 
 // ? Maybe check for animated elements within the same section and create a stagger?
 
-parllexUpAnims.forEach((el) => {
-  gsap.fromTo(el, {
-    yPercent: 15,
-    opacity: 0
-  }, {
-    duration: 1,
-    yPercent: 0,
-    opacity: 1,
-    ease: "power2.inOut",
-    scrollTrigger: {
-      trigger: el,
-      start: "top 75%"
+slideUpAnims.forEach((el) => {
+  gsap.fromTo(
+    el,
+    {
+      yPercent: 15,
+      opacity: 0,
+    },
+    {
+      duration: 1,
+      yPercent: 0,
+      opacity: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 75%",
+      },
     }
-  })
+  );
 });
 
 // ======================
-// Section: Button 2 Animations
+// Section: Move Delay Animations
 // ======================
+
+gsap.utils.toArray(".anim__move-delay").forEach((animation) => {
+  // Define a base movement distance (e.g., 50 pixels)
+  const baseMovement = 20;
+
+  ScrollTrigger.create({
+    trigger: animation,
+    start: "top 50%", // Start when the top of the element hits the middle of the viewport
+    end: "bottom top", // End when the bottom of the element exits the top of the viewport
+    scrub: true, // Smooth scrubbing effect to sync animation with scroll
+    onUpdate: (self) => {
+      // Get the height of the element
+      const elementHeight = animation.offsetHeight;
+
+      // Calculate a scaling factor based on the element height
+      // Smaller elements get a larger factor to increase their movement distance
+      const scale = Math.max(0.2, 100 / elementHeight); // Ensuring a minimum scale of 0.5
+
+      // Calculate the 'y' translation as scaled by the element's height
+      const yPercent =
+        self.direction === 1 ? -baseMovement * scale : baseMovement * scale;
+
+      // Apply the animation to move the element
+      gsap.to(animation, {
+        y: yPercent,
+        overwrite: "auto",
+      });
+    },
+  });
+});
 
 // ======================
 // Section: Ripple Text Animations
@@ -359,6 +395,7 @@ window.seeMore = function () {
 // Section: Features
 // ======================
 
+// Header text
 rippleText_anim(".features__h2", ".features");
 
 rippleText_anim(".features__tag", ".features", {
