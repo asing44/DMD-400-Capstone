@@ -2161,6 +2161,16 @@ html {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-Gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 112 133 / var(--tw-bg-opacity));
+}
+
+.bg-Gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(152 162 179 / var(--tw-bg-opacity));
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;

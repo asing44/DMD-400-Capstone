@@ -451,12 +451,6 @@ window.seeMore = function () {
 };
 
 // ======================
-// Section: Statement
-// ======================
-
-// Copy text write on
-
-// ======================
 // Section: Features
 // ======================
 
@@ -476,13 +470,22 @@ let progress_tl = gsap.timeline({
     pin: ".features__progress-container",
     start: "top 25%",
     end: `bottom 74%`,
-    scrub: 1,
+    scrub: 2,
     anticipatePin: 0.1,
   },
 });
 
 gsap.utils.toArray(".features__progress-circle").forEach((circle, index) => {
   index == 0
-    ? progress_tl.add(gsap.to(circle, { scale: 3 }))
-    : progress_tl.add(gsap.to(circle, { scale: 3 }));
+    ? progress_tl.add(gsap.to(circle, { scale: 3, ease: "bounce.out" }))
+    : progress_tl.add(
+        gsap.to(circle, { 
+          scale: 3, ease: "bounce.out" 
+        }));
+        progress_tl.add(
+        gsap.to(circle, {
+          backgroundColor: "#f9fafb",
+          borderColor: "#144b66"
+        }, 0)
+      );
 });
