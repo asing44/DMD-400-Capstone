@@ -180,7 +180,6 @@ gsap.utils.toArray(".anim__move-delay").forEach((animation) => {
     start: "top 50%", // Start when the top of the element hits the middle of the viewport
     end: "bottom top", // End when the bottom of the element exits the top of the viewport
     scrub: true, // Smooth scrubbing effect to sync animation with scroll
-    markers: true,
     onUpdate: (self) => {
       // Get the height of the element
 
@@ -240,7 +239,8 @@ gsap.utils.toArray(".anim__write-on").forEach(animation => {
         trigger: animation,
         start: "-25% 55%",
         end: "150% 75%",
-        scrub: true
+        scrub: 2,
+        markers: true
       },
     })
     .fromTo(
@@ -250,7 +250,7 @@ gsap.utils.toArray(".anim__write-on").forEach(animation => {
       },
       {
         delay: 0.2,
-        stagger: 0.1,
+        stagger: 0.2,
         ease: "power2.inOut",
         duration: dynamicDuration,
         color: "#eaecf0",
