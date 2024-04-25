@@ -509,6 +509,9 @@ html {
   overscroll-behavior: none;
   scroll-behavior: auto;
   touch-action: pan-x;
+  word-break: normal;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 
 *, ::before, ::after {
@@ -970,6 +973,10 @@ html {
 
 .h-\[100vh\] {
   height: 100vh;
+}
+
+.h-\[1px\] {
+  height: 1px;
 }
 
 .h-full {

@@ -201,6 +201,62 @@ gsap.utils.toArray(".anim__move-delay").forEach((animation) => {
 });
 
 // ======================
+// Section: Wrtie-on Animations
+// ======================
+
+gsap.utils.toArray(".anim__write-on").forEach(animation => {
+
+
+  if (!animation) {
+    console.error("Element not found: ", animation);
+    return;
+  } else {
+    console.log("Animtion found!: ", animation)
+  }
+
+  const characters = animation.textContent.trim().split("");
+  const textLength = characters.length;
+
+  animation.textContent = ""; // Clear the original content
+
+  // Wrap each character in a span and append to the original element
+  characters.forEach((char) => {
+    const span = document.createElement("span");
+    span.textContent = char === " " ? "\u00A0" : char; // Preserve spaces
+    span.classList.add("inline-block"); // Ensure spans do not wrap
+    animation.appendChild(span);
+  });
+
+  // Calculate dynamic duration based on the text length
+  const dynamicDuration = textLength * 0.1 + 1; // Smaller multiplier and a base value
+
+  // Create a GSAP timeline with ScrollTrigger
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: animation,
+        start: "-25% 55%",
+        end: "150% 75%",
+        scrub: true
+      },
+    })
+    .fromTo(
+      animation.querySelectorAll("span"),
+      {
+        color: "#98a2b3",
+      },
+      {
+        delay: 0.2,
+        stagger: 0.1,
+        ease: "power2.inOut",
+        duration: dynamicDuration,
+        color: "#eaecf0",
+      }
+    );
+});
+
+
+// ======================
 // Section: Ripple Text Animations
 // ======================
 
@@ -390,6 +446,12 @@ window.seeMore = function () {
     ease: "power2.inOut"
   });
 };
+
+// ======================
+// Section: Statement
+// ======================
+
+// Copy text write on
 
 // ======================
 // Section: Features
