@@ -987,6 +987,10 @@ html {
   max-height: 44px;
 }
 
+.min-h-80 {
+  min-height: 7rem;
+}
+
 .w-20 {
   width: 0.5rem;
 }

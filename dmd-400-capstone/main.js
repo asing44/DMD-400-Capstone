@@ -144,7 +144,6 @@ button2Anims.forEach(animationContainer => {
 // Up
 let slideUpAnims = gsap.utils.toArray(".anim__slide--up");
 
-// ? Maybe check for animated elements within the same section and create a stagger?
 
 slideUpAnims.forEach((el) => {
   gsap.fromTo(
@@ -172,16 +171,18 @@ slideUpAnims.forEach((el) => {
 
 gsap.utils.toArray(".anim__move-delay").forEach((animation) => {
   // Define a base movement distance (e.g., 50 pixels)
-  const baseMovement = 20;
+  const baseMovement = 10;
+
+  const elementHeight = animation.offsetHeight >= 50 ? animation.offsetHeight : 50;
 
   ScrollTrigger.create({
     trigger: animation,
     start: "top 50%", // Start when the top of the element hits the middle of the viewport
     end: "bottom top", // End when the bottom of the element exits the top of the viewport
     scrub: true, // Smooth scrubbing effect to sync animation with scroll
+    markers: true,
     onUpdate: (self) => {
       // Get the height of the element
-      const elementHeight = animation.offsetHeight;
 
       // Calculate a scaling factor based on the element height
       // Smaller elements get a larger factor to increase their movement distance
@@ -193,7 +194,9 @@ gsap.utils.toArray(".anim__move-delay").forEach((animation) => {
 
       // Apply the animation to move the element
       gsap.to(animation, {
-        y: yPercent,
+        duration: 2,
+        yPercent: yPercent,
+        ease: "ease.inOut",
         overwrite: "auto",
       });
     },
