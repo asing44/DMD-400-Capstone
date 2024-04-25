@@ -413,7 +413,6 @@ let progress_tl = gsap.timeline({
     end: `bottom 74%`,
     scrub: 1,
     anticipatePin: 0.1,
-    markers: true,
   },
 });
 

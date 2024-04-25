@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336.01 175.33">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #344054;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #5bba83;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke: #1d2939;
+      }
+
+      .cls-2, .cls-3, .cls-5, .cls-6, .cls-7 {
+        stroke-width: 4px;
+      }
+
+      .cls-3 {
+        fill: #347c52;
+      }
+
+      .cls-4 {
+        stroke-width: 6px;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 0 0 0 0 12 12 0 8;
+      }
+
+      .cls-6 {
+        fill: #77c0e4;
+      }
+
+      .cls-7 {
+        fill: #f2f4f7;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-8 {
+        font-family: NotoSansMono-ExtraLight, 'Noto Sans Mono';
+        font-variation-settings: 'wght' 200, 'wdth' 100;
+        font-weight: 200;
+      }
+
+      .cls-9 {
+        font-family: NotoSansMono-SemiBold, 'Noto Sans Mono';
+        font-variation-settings: 'wght' 600, 'wdth' 100;
+        font-weight: 600;
+      }
+
+      .cls-10 {
+        fill: #1d2939;
+        font-size: 40px;
+      }
+    </style>
+  </defs>
+  <g id="logo__v4">
+    <g id="full">
+      <g id="logo__full">
+        <g id="logo__full--text">
+          <g id="type">
+            <text class="cls-10" transform="translate(192.01 114.77)"><tspan class="cls-9"><tspan x="0" y="0">Smart</tspan></tspan><tspan class="cls-8"><tspan x="0" y="45">Garden</tspan></tspan></text>
+          </g>
+          <g>
+            <line class="cls-4" x1="48" y1="48.17" x2="32" y2="32.17"/>
+            <path class="cls-1" d="M24,38.17c-7.72,0-14-6.28-14-14s6.28-14,14-14,14,6.28,14,14-6.28,14-14,14ZM24,14.17c-5.51,0-10,4.49-10,10s4.49,10,10,10,10-4.49,10-10-4.49-10-10-10Z"/>
+            <path class="cls-6" d="M24,34.17c-5.51,0-10-4.49-10-10s4.49-10,10-10,10,4.49,10,10-4.49,10-10,10Z"/>
+            <circle class="cls-5" cx="24" cy="24" r="22"/>
+          </g>
+          <g>
+            <path class="cls-2" d="M158.55,33.62c-.9-.9-2.14-1.45-3.51-1.45h-83.04c-22.09,0-40,17.91-40,40v83.03c0,1.37.56,2.61,1.46,3.51l125.09-125.09h0Z"/>
+            <path class="cls-3" d="M158.55,33.62l-125.09,125.09c.9.9,2.14,1.46,3.51,1.46h99.03c13.25,0,24-10.75,24-24V37.13c0-1.37-.55-2.61-1.45-3.51Z"/>
+            <g>
+              <path class="cls-7" d="M88,95.17v-6h-12c-8.84,0-16,7.16-16,16v22c0,4.42,3.58,8,8,8h16c8.84,0,16-7.16,16-16v-12c-6.62,0-12-5.38-12-12Z"/>
+              <path class="cls-7" d="M108,57.17h16c4.42,0,8,3.58,8,8v22c0,8.83-7.17,16-16,16h-16c-4.42,0-8-3.58-8-8v-22c0-8.83,7.17-16,16-16Z" transform="translate(224 160.33) rotate(-180)"/>
+              <path class="cls-7" d="M108,57.17h16c4.42,0,8,3.58,8,8v22c0,8.83-7.17,16-16,16h-16c-4.42,0-8-3.58-8-8v-22c0-8.83,7.17-16,16-16Z" transform="translate(224 160.33) rotate(-180)"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
