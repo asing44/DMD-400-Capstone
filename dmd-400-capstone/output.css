@@ -1067,6 +1067,12 @@ html {
   border-collapse: separate;
 }
 
+.border-spacing-5 {
+  --tw-border-spacing-x: 2px;
+  --tw-border-spacing-y: 2px;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
 .rotate-180 {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2126,6 +2132,10 @@ html {
   border-color: rgb(249 250 251 / var(--tw-border-opacity));
 }
 
+.border-opacity-75 {
+  --tw-border-opacity: 0.75;
+}
+
 .bg-Brand-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(65 156 103 / var(--tw-bg-opacity));
@@ -2159,16 +2169,6 @@ html {
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-Gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(102 112 133 / var(--tw-bg-opacity));
-}
-
-.bg-Gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(152 162 179 / var(--tw-bg-opacity));
 }
 
 .decoration-slice {

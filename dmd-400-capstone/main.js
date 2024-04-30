@@ -239,8 +239,7 @@ gsap.utils.toArray(".anim__write-on").forEach(animation => {
         trigger: animation,
         start: "-25% 55%",
         end: "150% 75%",
-        scrub: 2,
-        markers: true
+        scrub: 2
       },
     })
     .fromTo(
